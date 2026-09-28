@@ -1,15 +1,21 @@
 [gd_scene format=3 uid="uid://7u581l6wyjfx"]
 
 [ext_resource type="Texture2D" uid="uid://25qn1v2d476n" path="res://assets/environment/Nivel1_Fondo.png" id="1_6pvgq"]
-[ext_resource type="Texture2D" uid="uid://bej41osvnq3ii" path="res://assets/environment/ground_placeholder.png" id="2"]
 [ext_resource type="Texture2D" uid="uid://qd8uehma8nmd" path="res://assets/environment/Nivel1E_Fondo.png" id="2_2fd88"]
 [ext_resource type="Script" uid="uid://clp6k8bbuenru" path="res://scripts/player.gd" id="2_75t5t"]
+[ext_resource type="Texture2D" uid="uid://d1mp3cn8qcq8n" path="res://assets/environment/Icons/pc.png" id="2_l57m3"]
+[ext_resource type="Texture2D" uid="uid://dkm52v5solo1s" path="res://assets/environment/Icons/File_img.png" id="3_sh7bd"]
+[ext_resource type="Texture2D" uid="uid://clinmmamm2fse" path="res://assets/environment/Icons/File_lleno.png" id="4_aw60n"]
 [ext_resource type="Texture2D" uid="uid://clhdaxudxubel" path="res://assets/player/PJRUN0.png" id="5_bia06"]
 [ext_resource type="Texture2D" uid="uid://1b5hs3bqcjdr" path="res://assets/player/PJIDLE.png" id="6_l57m3"]
+[ext_resource type="Texture2D" uid="uid://b81pqq7c2sqhj" path="res://assets/environment/TaskBar.png" id="6_sh7bd"]
 [ext_resource type="Texture2D" uid="uid://vnyr2k2dp2rc" path="res://assets/player/PJRUN1.png" id="7_fpljd"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kdeao"]
+size = Vector2(135.72183, 380)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ground"]
-size = Vector2(1800, 32)
+size = Vector2(1196.5, 67.5)
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_6pvgq"]
 load_path = "res://.godot/imported/PJIDLE2.png-f89fe5bf706519d20edac77a21da8cfb.ctex"
@@ -48,9 +54,6 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fc2y1"]
 size = Vector2(98, 128)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_kdeao"]
-size = Vector2(135.72183, 380)
-
 [node name="TestMain" type="Node2D" unique_id=1869153176]
 scale = Vector2(2, 2)
 
@@ -58,28 +61,60 @@ scale = Vector2(2, 2)
 position = Vector2(301, 205.25)
 scale = Vector2(1.196, 1.4572954)
 texture = ExtResource("1_6pvgq")
+metadata/_edit_group_ = true
 
-[node name="Background1" type="Sprite2D" parent="." unique_id=499701188]
-position = Vector2(899, 204.99998)
-scale = Vector2(1.196, 1.4572954)
+[node name="Pc" type="Sprite2D" parent="Background0" unique_id=1156849985]
+position = Vector2(-158.02676, -77.71245)
+scale = Vector2(0.15, 0.132)
+texture = ExtResource("2_l57m3")
+
+[node name="File_img" type="Sprite2D" parent="Background0" unique_id=307031501]
+position = Vector2(-154.68228, 57.126373)
+scale = Vector2(0.12, 0.12)
+texture = ExtResource("3_sh7bd")
+
+[node name="File" type="Sprite2D" parent="Background0" unique_id=354342391]
+position = Vector2(-152.59198, -9.778387)
+scale = Vector2(0.12, 0.12)
+texture = ExtResource("4_aw60n")
+
+[node name="Background1" type="Sprite2D" parent="Background0" unique_id=499701188]
+position = Vector2(500, -0.17155457)
 texture = ExtResource("2_2fd88")
 
-[node name="Ground" type="StaticBody2D" parent="." unique_id=313247954]
-position = Vector2(300, 400)
+[node name="LimiteIzquierdodelNivel" type="StaticBody2D" parent="Background0" unique_id=1634410812]
+position = Vector2(-42.642136, -2.5732574)
+scale = Vector2(0.8361204, 0.68620265)
+metadata/_edit_group_ = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground" unique_id=1251884195]
-position = Vector2(597, 0)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Background0/LimiteIzquierdodelNivel" unique_id=966431109]
+process_mode = 3
+process_priority = 1
+process_physics_priority = 1
+physics_interpolation_mode = 1
+shape = SubResource("RectangleShape2D_kdeao")
+one_way_collision_margin = 0.0
+one_way_collision_direction = Vector2(1, 0)
+
+[node name="Suelo" type="StaticBody2D" parent="Background0" unique_id=313247954]
+position = Vector2(-1.6722412, 136.72588)
+scale = Vector2(0.8361204, 0.68620265)
+metadata/_edit_group_ = true
+
+[node name="Colision" type="CollisionShape2D" parent="Background0/Suelo" unique_id=1251884195]
+position = Vector2(300.25, -7.25)
 shape = SubResource("RectangleShape2D_ground")
 
-[node name="Sprite2D" type="Sprite2D" parent="Ground" unique_id=458538778]
-position = Vector2(598.5, 0)
-scale = Vector2(112.3125, 2)
-texture = ExtResource("2")
+[node name="Barra de tareas" type="Sprite2D" parent="Background0/Suelo" unique_id=458538778]
+position = Vector2(300.00006, -6.874995)
+scale = Vector2(1.1865078, 1.0766122)
+texture = ExtResource("6_sh7bd")
 
 [node name="Player" type="CharacterBody2D" parent="." unique_id=1903134632]
-position = Vector2(392.5, 335)
+position = Vector2(334, 346)
 scale = Vector2(0.5, 0.5)
 script = ExtResource("2_75t5t")
+metadata/_edit_group_ = true
 
 [node name="PJanimation" type="AnimatedSprite2D" parent="Player" unique_id=1578915610]
 scale = Vector2(0.5, 0.5)
@@ -92,19 +127,6 @@ scale = Vector2(0.5, 0.5)
 shape = SubResource("RectangleShape2D_fc2y1")
 
 [node name="Camara" type="Camera2D" parent="Player" unique_id=1464529734]
-position = Vector2(0, -265)
+position = Vector2(0, -200)
 scale = Vector2(0.5, 0.5)
 zoom = Vector2(0.25, 0.25)
-
-[node name="LimiteIzquierdodelNivel" type="StaticBody2D" parent="." unique_id=1634410812]
-position = Vector2(48, 674)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="LimiteIzquierdodelNivel" unique_id=966431109]
-process_mode = 3
-process_priority = 1
-process_physics_priority = 1
-physics_interpolation_mode = 1
-position = Vector2(200.5, -482)
-shape = SubResource("RectangleShape2D_kdeao")
-one_way_collision_margin = 0.0
-one_way_collision_direction = Vector2(1, 0)
