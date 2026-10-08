@@ -17,7 +17,7 @@ CyberPlatform/
 ├── scenes/
 │   ├── player/player.tscn
 │   ├── test/test_main.tscn
-│   ├── levels/        (vacío, para Fase 2/6/7)
+│   ├── levels/         (vacío, para Fase 2/6/7)
 │   ├── ui/             (vacío, para Fase 4)
 │   └── effects/        (vacío, para Fase 5)
 ├── scripts/
@@ -27,6 +27,7 @@ CyberPlatform/
 └── assets/
 	├── player/player_placeholder.png
 	├── environment/ground_placeholder.png
+		└── icons/      (Iconos de fondo) 
 	├── ui/          (vacío)
 	└── effects/     (vacío)
 ```
