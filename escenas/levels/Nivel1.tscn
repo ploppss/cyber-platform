@@ -9,15 +9,18 @@
 [ext_resource type="Texture2D" uid="uid://b81pqq7c2sqhj" path="res://recursos/environment/TaskBar.png" id="7_q3mwf"]
 [ext_resource type="Script" uid="uid://clhvdhwpvmopb" path="res://scripts/Respawn.gd" id="8_8i0p2"]
 [ext_resource type="Texture2D" uid="uid://h1abg4l23evc" path="res://recursos/environment/icons/Chrome.png" id="9_4pbku"]
-[ext_resource type="Texture2D" uid="uid://bej41osvnq3ii" path="res://recursos/environment/ground_placeholder.png" id="10_gektl"]
+[ext_resource type="Texture2D" uid="uid://h6siqapqp34i" path="res://recursos/environment/icons/TaskBar_V2_5.png" id="10_xpovp"]
 [ext_resource type="Texture2D" uid="uid://b1x3jnmmw3bgj" path="res://recursos/environment/icons/Basura.png" id="11_q6cye"]
 [ext_resource type="Texture2D" uid="uid://bdcqqupbb30bm" path="res://recursos/environment/icons/BasuraFull.png" id="12_r7xmp"]
 [ext_resource type="Texture2D" uid="uid://dap1cn88nwxy7" path="res://recursos/environment/icons/Exel.png" id="13_ksxku"]
 [ext_resource type="Texture2D" uid="uid://bhdmtcv5qtrnm" path="res://recursos/environment/icons/Folder.png" id="14_dt5ht"]
 [ext_resource type="Texture2D" uid="uid://dy2m1c87kdecn" path="res://recursos/environment/icons/Word.png" id="15_av6ey"]
+[ext_resource type="Texture2D" uid="uid://beh87x4v8omqh" path="res://recursos/environment/icons/File_explorer.png" id="16_2io18"]
 [ext_resource type="Script" uid="uid://clp6k8bbuenru" path="res://scripts/player.gd" id="16_c4el4"]
 [ext_resource type="Texture2D" uid="uid://1b5hs3bqcjdr" path="res://recursos/player/PJIDLE.png" id="17_6e6mo"]
+[ext_resource type="Texture2D" uid="uid://d2hvkou51ft7w" path="res://recursos/environment/icons/PowerPoint.png" id="17_m24pc"]
 [ext_resource type="Texture2D" uid="uid://bw1j5wn4mjnlc" path="res://recursos/player/PJIDLE1.png" id="18_1u8p6"]
+[ext_resource type="Texture2D" uid="uid://bflp63b2stidj" path="res://recursos/environment/icons/Discord.png" id="18_xpovp"]
 [ext_resource type="Texture2D" uid="uid://clhdaxudxubel" path="res://recursos/player/PJRUN0.png" id="19_uci6x"]
 [ext_resource type="Texture2D" uid="uid://vnyr2k2dp2rc" path="res://recursos/player/PJRUN1.png" id="20_pas1c"]
 [ext_resource type="Script" uid="uid://cknclef72ydb7" path="res://scripts/VPN_Teleport.gd" id="21_kqlu6"]
@@ -33,7 +36,7 @@ size = Vector2(1180.8489, 66.5)
 size = Vector2(558.125, 20)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_j3cuc"]
-size = Vector2(7360.1836, 97.63881)
+size = Vector2(1454.934, 107.83991)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_l56bx"]
 size = Vector2(60.077515, 89.19586)
@@ -52,6 +55,30 @@ size = Vector2(46.0458, 37.88968)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_drc5x"]
 size = Vector2(50.23209, 75.05072)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ice7r"]
+size = Vector2(89.10199, 64.12107)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ywetn"]
+size = Vector2(33.920044, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dmdee"]
+size = Vector2(56.809998, 82.33722)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ivjt5"]
+radius = 51.43314
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ivjt5"]
+size = Vector2(52.623962, 51.005356)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mbjvu"]
+size = Vector2(62.19214, 64.84961)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_udqe8"]
+size = Vector2(44.5, 36)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0a27y"]
+size = Vector2(20, 30.5)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_l57m3"]
 animations = [{
@@ -101,6 +128,12 @@ position = Vector2(249.8446, -189.22029)
 scale = Vector2(0.3632592, 0.12205753)
 texture = ExtResource("2_2io18")
 
+[node name="Cielo2" type="Sprite2D" parent="Background0" unique_id=1706490732]
+visibility_layer = 16
+position = Vector2(1245.8195, -189.56349)
+scale = Vector2(0.3632592, 0.12205753)
+texture = ExtResource("2_2io18")
+
 [node name="Pc" type="Sprite2D" parent="Background0" unique_id=1156849985]
 position = Vector2(-158.02676, -77.71245)
 scale = Vector2(0.15, 0.132)
@@ -120,8 +153,18 @@ texture = ExtResource("5_rn5sp")
 position = Vector2(500, 0)
 texture = ExtResource("6_my53v")
 
+[node name="Background2" type="Sprite2D" parent="Background0" unique_id=1189277642]
+position = Vector2(1003.3445, -0.51464844)
+scale = Vector2(1.0225754, 1)
+texture = ExtResource("1_eg275")
+metadata/_edit_group_ = true
+
+[node name="Background3" type="Sprite2D" parent="Background0" unique_id=945930442]
+position = Vector2(1508.3612, -0.51465195)
+texture = ExtResource("6_my53v")
+
 [node name="LimiteIzquierdodelNivel" type="StaticBody2D" parent="Background0" unique_id=1634410812]
-position = Vector2(-42.642136, -2.5732574)
+position = Vector2(-50.58528, 3.6025665)
 scale = Vector2(0.8361204, 0.68620265)
 metadata/_edit_group_ = true
 
@@ -143,6 +186,7 @@ position = Vector2(306.57556, -6.75)
 shape = SubResource("RectangleShape2D_ground")
 
 [node name="Barra de tareas" type="Sprite2D" parent="Background0/Suelo" unique_id=458538778]
+z_index = 1
 position = Vector2(300.00006, -6.874995)
 scale = Vector2(1.1865078, 1.0766122)
 texture = ExtResource("7_q3mwf")
@@ -150,9 +194,26 @@ texture = ExtResource("7_q3mwf")
 [node name="KillZone" type="Area2D" parent="Background0/Suelo" unique_id=756132878]
 position = Vector2(619.5, -36)
 script = ExtResource("8_8i0p2")
-metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Background0/Suelo/KillZone" unique_id=1129016160]
+shape = SubResource("RectangleShape2D_wms0f")
+debug_color = Color(0.99987215, 0, 0.11389885, 0.41960785)
+
+[node name="KillZone" type="Area2D" parent="Background0/Suelo/KillZone" unique_id=995861006]
+position = Vector2(558, 0)
+script = ExtResource("8_8i0p2")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Background0/Suelo/KillZone/KillZone" unique_id=1715579007]
+shape = SubResource("RectangleShape2D_wms0f")
+debug_color = Color(0.99987215, 0, 0.11389885, 0.41960785)
+
+[node name="KillZone2" type="Area2D" parent="Background0/Suelo/KillZone" unique_id=2105135780]
+position = Vector2(1116, 0)
+script = ExtResource("8_8i0p2")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Background0/Suelo/KillZone/KillZone2" unique_id=17138763]
 shape = SubResource("RectangleShape2D_wms0f")
 debug_color = Color(0.99987215, 0, 0.11389885, 0.41960785)
 
@@ -161,17 +222,22 @@ position = Vector2(-134.25, -4.7500024)
 scale = Vector2(0.48828128, 0.42578134)
 texture = ExtResource("9_4pbku")
 
+[node name="Node" type="Node" parent="Background0" unique_id=1753093241]
+
 [node name="Suelo2" type="StaticBody2D" parent="." unique_id=646312036]
-position = Vector2(4275, 397.5)
+position = Vector2(3909.9998, 442.49997)
 scale = Vector2(0.8361205, 0.68620265)
 metadata/_edit_group_ = true
 
 [node name="PlaceHolder" type="Sprite2D" parent="Suelo2" unique_id=1594415782]
-scale = Vector2(460.07333, 6.102426)
-texture = ExtResource("10_gektl")
+position = Vector2(-2529.9155, -127.51341)
+scale = Vector2(11.508026, 13.684914)
+texture = ExtResource("10_xpovp")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Suelo2" unique_id=1304045900]
+position = Vector2(-2528.6428, -60.477722)
 shape = SubResource("RectangleShape2D_j3cuc")
+metadata/_edit_group_ = true
 
 [node name="Parkour1" type="StaticBody2D" parent="." unique_id=1971285880]
 position = Vector2(568.5, 343.00003)
@@ -258,32 +324,82 @@ position = Vector2(-24.817139, 2.1859436)
 shape = SubResource("RectangleShape2D_rskq6")
 
 [node name="Parkour7" type="StaticBody2D" parent="." unique_id=206996787]
-position = Vector2(1235, 473)
+position = Vector2(1213.5, 196.49998)
 scale = Vector2(0.8361205, 0.68620265)
+
+[node name="Sprite2D" type="Sprite2D" parent="Parkour7" unique_id=512402533]
+texture = ExtResource("16_2io18")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Parkour7" unique_id=712672943]
+position = Vector2(1.4945068, 8.015198)
+shape = SubResource("RectangleShape2D_ice7r")
 metadata/_edit_group_ = true
+
+[node name="ColisionChica" type="CollisionShape2D" parent="Parkour7" unique_id=1104359559]
+position = Vector2(-25.929932, -21.130768)
+shape = SubResource("RectangleShape2D_ywetn")
 
 [node name="Parkour8" type="StaticBody2D" parent="." unique_id=832854501]
-position = Vector2(1562.5, 567.5)
+position = Vector2(1381, 275.5)
 scale = Vector2(0.8361205, 0.68620265)
 metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Parkour8" unique_id=80943948]
+position = Vector2(4.4345856e-05, 2.026558e-05)
+scale = Vector2(0.17919391, 0.18306409)
+texture = ExtResource("4_xpovp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Parkour8" unique_id=8778910]
+position = Vector2(-2.0928955, -3.2789307)
+shape = SubResource("RectangleShape2D_dmdee")
 
 [node name="Parkour9" type="StaticBody2D" parent="." unique_id=636615661]
-position = Vector2(1646, 637.5)
+position = Vector2(1536.4999, 277)
 scale = Vector2(0.8361205, 0.68620265)
 metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Parkour9" unique_id=486964519]
+texture = ExtResource("17_m24pc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Parkour9" unique_id=716213727]
+position = Vector2(2.9901457, 13.115658)
+shape = SubResource("CircleShape2D_ivjt5")
+
+[node name="ColisionChica" type="CollisionShape2D" parent="Parkour9" unique_id=932623780]
+position = Vector2(-18.537842, 2.1859436)
+shape = SubResource("RectangleShape2D_ivjt5")
 
 [node name="Parkour10" type="StaticBody2D" parent="." unique_id=1008008216]
-position = Vector2(1783, 658)
+position = Vector2(1660.5, 278)
 scale = Vector2(0.8361205, 0.68620265)
 metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Parkour10" unique_id=1163393100]
+scale = Vector2(0.09492483, 0.09938346)
+texture = ExtResource("18_xpovp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Parkour10" unique_id=396981084]
+position = Vector2(-0.00048828125, -0.36437988)
+shape = SubResource("RectangleShape2D_mbjvu")
 
 [node name="Parkour11" type="StaticBody2D" parent="." unique_id=707648530]
-position = Vector2(1477.9999, 470)
-scale = Vector2(0.8361205, 0.68620265)
-metadata/_edit_group_ = true
+position = Vector2(1441, 410.5)
+
+[node name="Sprite2D" type="Sprite2D" parent="Parkour11" unique_id=797883795]
+position = Vector2(308.50006, -179.50002)
+scale = Vector2(0.12978278, 0.118576236)
+texture = ExtResource("3_m24pc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Parkour11" unique_id=192229041]
+position = Vector2(316.25, -187.5)
+shape = SubResource("RectangleShape2D_udqe8")
+
+[node name="ColisionChica" type="CollisionShape2D" parent="Parkour11" unique_id=899650211]
+position = Vector2(290, -177.75)
+shape = SubResource("RectangleShape2D_0a27y")
 
 [node name="Player" type="CharacterBody2D" parent="." unique_id=1903134632]
-position = Vector2(334, 346)
+position = Vector2(381.5, 347)
 scale = Vector2(0.5, 0.5)
 script = ExtResource("16_c4el4")
 metadata/_edit_group_ = true
@@ -304,7 +420,7 @@ scale = Vector2(0.5, 0.5)
 zoom = Vector2(0.25, 0.25)
 
 [node name="VPN_NextLev" type="Area2D" parent="." unique_id=1864560920]
-position = Vector2(1213.5, 176.5)
+position = Vector2(1865.5, 160.5)
 script = ExtResource("21_kqlu6")
 siguiente_escena = "uid://cg8prsg328elk"
 metadata/_edit_group_ = true
@@ -331,4 +447,6 @@ color = Color(0, 0, 0, 1)
 metadata/_edit_use_anchors_ = true
 
 [connection signal="body_entered" from="Background0/Suelo/KillZone" to="Background0/Suelo/KillZone" method="_on_body_entered"]
+[connection signal="body_entered" from="Background0/Suelo/KillZone/KillZone" to="Background0/Suelo/KillZone/KillZone" method="_on_body_entered"]
+[connection signal="body_entered" from="Background0/Suelo/KillZone/KillZone2" to="Background0/Suelo/KillZone/KillZone2" method="_on_body_entered"]
 [connection signal="body_entered" from="VPN_NextLev" to="VPN_NextLev" method="_on_body_entered"]
