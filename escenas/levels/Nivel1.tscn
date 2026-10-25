@@ -1,30 +1,31 @@
 [gd_scene format=3 uid="uid://7u581l6wyjfx"]
 
-[ext_resource type="Texture2D" uid="uid://25qn1v2d476n" path="res://recursos/environment/Nivel1_Fondo.png" id="1_eg275"]
-[ext_resource type="Texture2D" uid="uid://d18q5rq43hvb0" path="res://recursos/environment/CieloComplementario.png" id="2_2io18"]
-[ext_resource type="Texture2D" uid="uid://d1mp3cn8qcq8n" path="res://recursos/environment/icons/pc.png" id="3_m24pc"]
-[ext_resource type="Texture2D" uid="uid://dkm52v5solo1s" path="res://recursos/environment/icons/File_img.png" id="4_xpovp"]
-[ext_resource type="Texture2D" uid="uid://clinmmamm2fse" path="res://recursos/environment/icons/File_lleno.png" id="5_rn5sp"]
-[ext_resource type="Texture2D" uid="uid://qd8uehma8nmd" path="res://recursos/environment/Nivel1E_Fondo.png" id="6_my53v"]
-[ext_resource type="Texture2D" uid="uid://b81pqq7c2sqhj" path="res://recursos/environment/TaskBar.png" id="7_q3mwf"]
+[ext_resource type="Texture2D" uid="uid://25qn1v2d476n" path="res://recursos/environment/Nivel1/Nivel1_Fondo.png" id="1_rn5sp"]
+[ext_resource type="Texture2D" uid="uid://d18q5rq43hvb0" path="res://recursos/environment/Nivel1/CieloComplementario.png" id="2_2io18"]
+[ext_resource type="Texture2D" uid="uid://d1mp3cn8qcq8n" path="res://recursos/environment/Nivel1/icons/pc.png" id="3_m24pc"]
+[ext_resource type="Texture2D" uid="uid://dkm52v5solo1s" path="res://recursos/environment/Nivel1/icons/File_img.png" id="4_xpovp"]
+[ext_resource type="Texture2D" uid="uid://clinmmamm2fse" path="res://recursos/environment/Nivel1/icons/File_lleno.png" id="5_rn5sp"]
+[ext_resource type="Texture2D" uid="uid://qd8uehma8nmd" path="res://recursos/environment/Nivel1/Nivel1E_Fondo.png" id="6_my53v"]
+[ext_resource type="Texture2D" uid="uid://b81pqq7c2sqhj" path="res://recursos/environment/Nivel1/TaskBar.png" id="7_q3mwf"]
 [ext_resource type="Script" uid="uid://clhvdhwpvmopb" path="res://scripts/Respawn.gd" id="8_8i0p2"]
-[ext_resource type="Texture2D" uid="uid://h1abg4l23evc" path="res://recursos/environment/icons/Chrome.png" id="9_4pbku"]
-[ext_resource type="Texture2D" uid="uid://h6siqapqp34i" path="res://recursos/environment/icons/TaskBar_V2_5.png" id="10_xpovp"]
-[ext_resource type="Texture2D" uid="uid://b1x3jnmmw3bgj" path="res://recursos/environment/icons/Basura.png" id="11_q6cye"]
-[ext_resource type="Texture2D" uid="uid://bdcqqupbb30bm" path="res://recursos/environment/icons/BasuraFull.png" id="12_r7xmp"]
-[ext_resource type="Texture2D" uid="uid://dap1cn88nwxy7" path="res://recursos/environment/icons/Exel.png" id="13_ksxku"]
-[ext_resource type="Texture2D" uid="uid://bhdmtcv5qtrnm" path="res://recursos/environment/icons/Folder.png" id="14_dt5ht"]
-[ext_resource type="Texture2D" uid="uid://dy2m1c87kdecn" path="res://recursos/environment/icons/Word.png" id="15_av6ey"]
-[ext_resource type="Texture2D" uid="uid://beh87x4v8omqh" path="res://recursos/environment/icons/File_explorer.png" id="16_2io18"]
+[ext_resource type="Texture2D" uid="uid://h1abg4l23evc" path="res://recursos/environment/Nivel1/icons/Chrome.png" id="9_4pbku"]
+[ext_resource type="Texture2D" uid="uid://h6siqapqp34i" path="res://recursos/environment/Nivel1/icons/TaskBar_V2_5.png" id="10_xpovp"]
+[ext_resource type="Texture2D" uid="uid://b1x3jnmmw3bgj" path="res://recursos/environment/Nivel1/icons/Basura.png" id="11_q6cye"]
+[ext_resource type="Texture2D" uid="uid://bdcqqupbb30bm" path="res://recursos/environment/Nivel1/icons/BasuraFull.png" id="12_r7xmp"]
+[ext_resource type="Texture2D" uid="uid://dap1cn88nwxy7" path="res://recursos/environment/Nivel1/icons/Exel.png" id="13_ksxku"]
+[ext_resource type="Texture2D" uid="uid://bhdmtcv5qtrnm" path="res://recursos/environment/Nivel1/icons/Folder.png" id="14_dt5ht"]
+[ext_resource type="Texture2D" uid="uid://dy2m1c87kdecn" path="res://recursos/environment/Nivel1/icons/Word.png" id="15_av6ey"]
+[ext_resource type="Texture2D" uid="uid://beh87x4v8omqh" path="res://recursos/environment/Nivel1/icons/File_explorer.png" id="16_2io18"]
 [ext_resource type="Script" uid="uid://clp6k8bbuenru" path="res://scripts/player.gd" id="16_c4el4"]
 [ext_resource type="Texture2D" uid="uid://1b5hs3bqcjdr" path="res://recursos/player/PJIDLE.png" id="17_6e6mo"]
-[ext_resource type="Texture2D" uid="uid://d2hvkou51ft7w" path="res://recursos/environment/icons/PowerPoint.png" id="17_m24pc"]
+[ext_resource type="Texture2D" uid="uid://d2hvkou51ft7w" path="res://recursos/environment/Nivel1/icons/PowerPoint.png" id="17_m24pc"]
 [ext_resource type="Texture2D" uid="uid://bw1j5wn4mjnlc" path="res://recursos/player/PJIDLE1.png" id="18_1u8p6"]
-[ext_resource type="Texture2D" uid="uid://bflp63b2stidj" path="res://recursos/environment/icons/Discord.png" id="18_xpovp"]
+[ext_resource type="Texture2D" uid="uid://bflp63b2stidj" path="res://recursos/environment/Nivel1/icons/Discord.png" id="18_xpovp"]
 [ext_resource type="Texture2D" uid="uid://clhdaxudxubel" path="res://recursos/player/PJRUN0.png" id="19_uci6x"]
 [ext_resource type="Texture2D" uid="uid://vnyr2k2dp2rc" path="res://recursos/player/PJRUN1.png" id="20_pas1c"]
 [ext_resource type="Script" uid="uid://cknclef72ydb7" path="res://scripts/VPN_Teleport.gd" id="21_kqlu6"]
-[ext_resource type="Texture2D" uid="uid://b8ei0pi80452a" path="res://recursos/environment/icons/VPN.png" id="22_nboj3"]
+[ext_resource type="Texture2D" uid="uid://b8ei0pi80452a" path="res://recursos/environment/Nivel1/icons/VPN.png" id="22_nboj3"]
+[ext_resource type="Texture2D" uid="uid://dmm2fxu1k6qyh" path="res://recursos/ui/Trancision.png" id="26_rn5sp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kdeao"]
 size = Vector2(135.72183, 380)
@@ -120,7 +121,7 @@ scale = Vector2(2, 2)
 [node name="Background0" type="Sprite2D" parent="." unique_id=1739691187]
 position = Vector2(301, 205.25)
 scale = Vector2(1.196, 1.4572954)
-texture = ExtResource("1_eg275")
+texture = ExtResource("1_rn5sp")
 
 [node name="Cielo" type="Sprite2D" parent="Background0" unique_id=551808253]
 visibility_layer = 16
@@ -156,7 +157,7 @@ texture = ExtResource("6_my53v")
 [node name="Background2" type="Sprite2D" parent="Background0" unique_id=1189277642]
 position = Vector2(1003.3445, -0.51464844)
 scale = Vector2(1.0225754, 1)
-texture = ExtResource("1_eg275")
+texture = ExtResource("1_rn5sp")
 metadata/_edit_group_ = true
 
 [node name="Background3" type="Sprite2D" parent="Background0" unique_id=945930442]
@@ -399,7 +400,7 @@ position = Vector2(290, -177.75)
 shape = SubResource("RectangleShape2D_0a27y")
 
 [node name="Player" type="CharacterBody2D" parent="." unique_id=1903134632]
-position = Vector2(381.5, 347)
+position = Vector2(325.5, 343.5)
 scale = Vector2(0.5, 0.5)
 script = ExtResource("16_c4el4")
 metadata/_edit_group_ = true
@@ -435,16 +436,14 @@ shape = SubResource("CircleShape2D_wms0f")
 [node name="TransicionServidor" type="CanvasLayer" parent="." unique_id=1718045511]
 visible = false
 
-[node name="ColorRect" type="ColorRect" parent="TransicionServidor" unique_id=411971666]
+[node name="TextureRect" type="TextureRect" parent="TransicionServidor" unique_id=1289214402]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-metadata/_edit_use_anchors_ = true
+texture = ExtResource("26_rn5sp")
+expand_mode = 1
 
 [connection signal="body_entered" from="Background0/Suelo/KillZone" to="Background0/Suelo/KillZone" method="_on_body_entered"]
 [connection signal="body_entered" from="Background0/Suelo/KillZone/KillZone" to="Background0/Suelo/KillZone/KillZone" method="_on_body_entered"]
