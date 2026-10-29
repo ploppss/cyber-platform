@@ -1,0 +1,846 @@
+[gd_scene format=3 uid="uid://s8pv7t8xifc8"]
+
+[ext_resource type="Texture2D" uid="uid://b2tcyrpxms2fx" path="res://recursos/environment/Nivel3/Nivel3_Fondo.jpg" id="1_fondo3"]
+[ext_resource type="Script" uid="uid://clp6k8bbuenru" path="res://scripts/player.gd" id="2_ck6kq"]
+[ext_resource type="Script" uid="uid://clhvdhwpvmopb" path="res://scripts/Respawn.gd" id="2_resp"]
+[ext_resource type="Texture2D" uid="uid://1b5hs3bqcjdr" path="res://recursos/player/PJIDLE.png" id="3_8m55j"]
+[ext_resource type="Texture2D" uid="uid://bw1j5wn4mjnlc" path="res://recursos/player/PJIDLE1.png" id="4_ua5sp"]
+[ext_resource type="Texture2D" uid="uid://clhdaxudxubel" path="res://recursos/player/PJRUN0.png" id="5_jriiy"]
+[ext_resource type="Texture2D" uid="uid://vnyr2k2dp2rc" path="res://recursos/player/PJRUN1.png" id="6_0pacm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n3_1"]
+size = Vector2(1177.2, 86.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n3_2"]
+size = Vector2(488.8, 86.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n3_3"]
+size = Vector2(1030, 86.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n3_4"]
+size = Vector2(743.6, 86.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n3_5"]
+size = Vector2(272.8, 86.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n3_6"]
+size = Vector2(801.2, 86.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n3_7"]
+size = Vector2(102, 86.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n3_8"]
+size = Vector2(360.4, 86.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n3_9"]
+size = Vector2(24, 24)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n3_10"]
+size = Vector2(30, 30)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n3_11"]
+size = Vector2(46, 18)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n3_12"]
+size = Vector2(46, 36)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n3_13"]
+size = Vector2(102, 8)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n3_14"]
+size = Vector2(46, 14)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n3_15"]
+size = Vector2(46, 28)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n3_16"]
+size = Vector2(46, 42)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n3_17"]
+size = Vector2(116, 8)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n3_18"]
+size = Vector2(30, 30)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n3_19"]
+size = Vector2(5680, 60)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n3_20"]
+size = Vector2(20, 700)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n3_21"]
+size = Vector2(20, 700)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_l57m3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_8m55j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_ua5sp")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 0.5
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_jriiy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_8m55j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_0pacm")
+}],
+"loop": 1,
+"name": &"run",
+"speed": 7.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fc2y1"]
+size = Vector2(80, 120)
+
+[node name="Nivel3" type="Node2D" unique_id=1691080899]
+scale = Vector2(2, 2)
+
+[node name="Fondos" type="Node2D" parent="." unique_id=1918619229]
+
+[node name="Fondo1" type="Sprite2D" parent="Fondos" unique_id=1333068657]
+texture_filter = 2
+position = Vector2(528, 291.5)
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("1_fondo3")
+
+[node name="Fondo2" type="Sprite2D" parent="Fondos" unique_id=1428596080]
+texture_filter = 2
+position = Vector2(1584, 291.5)
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("1_fondo3")
+flip_h = true
+
+[node name="Fondo3" type="Sprite2D" parent="Fondos" unique_id=1281685664]
+texture_filter = 2
+position = Vector2(2640, 291.5)
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("1_fondo3")
+
+[node name="Fondo4" type="Sprite2D" parent="Fondos" unique_id=1296888819]
+texture_filter = 2
+position = Vector2(3696, 291.5)
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("1_fondo3")
+flip_h = true
+
+[node name="Fondo5" type="Sprite2D" parent="Fondos" unique_id=67026968]
+texture_filter = 2
+position = Vector2(4752, 291.5)
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("1_fondo3")
+
+[node name="Placeholders" type="Node2D" parent="." unique_id=803788311]
+
+[node name="VisSuelo1" type="Polygon2D" parent="Placeholders" unique_id=10334187]
+color = Color(0.03, 0.04, 0.14, 1)
+polygon = PackedVector2Array(0, 393.75, 1177.2, 393.75, 1177.2, 480.25, 0, 480.25)
+
+[node name="Borde" type="Line2D" parent="Placeholders/VisSuelo1" unique_id=1024928172]
+points = PackedVector2Array(0, 393.75, 1177.2, 393.75, 1177.2, 480.25, 0, 480.25)
+closed = true
+width = 1.0
+default_color = Color(0.2, 0.9, 1, 1)
+
+[node name="VisSuelo2" type="Polygon2D" parent="Placeholders" unique_id=1232707778]
+color = Color(0.03, 0.04, 0.14, 1)
+polygon = PackedVector2Array(1213.2, 393.75, 1702, 393.75, 1702, 480.25, 1213.2, 480.25)
+
+[node name="Borde" type="Line2D" parent="Placeholders/VisSuelo2" unique_id=495757193]
+points = PackedVector2Array(1213.2, 393.75, 1702, 393.75, 1702, 480.25, 1213.2, 480.25)
+closed = true
+width = 1.0
+default_color = Color(0.2, 0.9, 1, 1)
+
+[node name="VisSuelo3" type="Polygon2D" parent="Placeholders" unique_id=854650964]
+color = Color(0.03, 0.04, 0.14, 1)
+polygon = PackedVector2Array(1746, 393.75, 2776, 393.75, 2776, 480.25, 1746, 480.25)
+
+[node name="Borde" type="Line2D" parent="Placeholders/VisSuelo3" unique_id=465034124]
+points = PackedVector2Array(1746, 393.75, 2776, 393.75, 2776, 480.25, 1746, 480.25)
+closed = true
+width = 1.0
+default_color = Color(0.2, 0.9, 1, 1)
+
+[node name="VisSuelo4" type="Polygon2D" parent="Placeholders" unique_id=272821209]
+color = Color(0.03, 0.04, 0.14, 1)
+polygon = PackedVector2Array(2828, 393.75, 3571.6, 393.75, 3571.6, 480.25, 2828, 480.25)
+
+[node name="Borde" type="Line2D" parent="Placeholders/VisSuelo4" unique_id=1500062078]
+points = PackedVector2Array(2828, 393.75, 3571.6, 393.75, 3571.6, 480.25, 2828, 480.25)
+closed = true
+width = 1.0
+default_color = Color(0.2, 0.9, 1, 1)
+
+[node name="VisSuelo5" type="Polygon2D" parent="Placeholders" unique_id=1238194104]
+color = Color(0.03, 0.04, 0.14, 1)
+polygon = PackedVector2Array(3627.6, 393.75, 3900.4, 393.75, 3900.4, 480.25, 3627.6, 480.25)
+
+[node name="Borde" type="Line2D" parent="Placeholders/VisSuelo5" unique_id=1767884977]
+points = PackedVector2Array(3627.6, 393.75, 3900.4, 393.75, 3900.4, 480.25, 3627.6, 480.25)
+closed = true
+width = 1.0
+default_color = Color(0.2, 0.9, 1, 1)
+
+[node name="VisSuelo6" type="Polygon2D" parent="Placeholders" unique_id=919363423]
+color = Color(0.03, 0.04, 0.14, 1)
+polygon = PackedVector2Array(3936.4, 393.75, 4737.6, 393.75, 4737.6, 480.25, 3936.4, 480.25)
+
+[node name="Borde" type="Line2D" parent="Placeholders/VisSuelo6" unique_id=829796274]
+points = PackedVector2Array(3936.4, 393.75, 4737.6, 393.75, 4737.6, 480.25, 3936.4, 480.25)
+closed = true
+width = 1.0
+default_color = Color(0.2, 0.9, 1, 1)
+
+[node name="VisSuelo7" type="Polygon2D" parent="Placeholders" unique_id=965680816]
+color = Color(0.03, 0.04, 0.14, 1)
+polygon = PackedVector2Array(4777.6, 393.75, 4879.6, 393.75, 4879.6, 480.25, 4777.6, 480.25)
+
+[node name="Borde" type="Line2D" parent="Placeholders/VisSuelo7" unique_id=641462491]
+points = PackedVector2Array(4777.6, 393.75, 4879.6, 393.75, 4879.6, 480.25, 4777.6, 480.25)
+closed = true
+width = 1.0
+default_color = Color(0.2, 0.9, 1, 1)
+
+[node name="VisSuelo8" type="Polygon2D" parent="Placeholders" unique_id=1964498539]
+color = Color(0.03, 0.04, 0.14, 1)
+polygon = PackedVector2Array(4919.6, 393.75, 5280, 393.75, 5280, 480.25, 4919.6, 480.25)
+
+[node name="Borde" type="Line2D" parent="Placeholders/VisSuelo8" unique_id=984342866]
+points = PackedVector2Array(4919.6, 393.75, 5280, 393.75, 5280, 480.25, 4919.6, 480.25)
+closed = true
+width = 1.0
+default_color = Color(0.2, 0.9, 1, 1)
+
+[node name="VisParkour1" type="Polygon2D" parent="Placeholders" unique_id=1448578845]
+color = Color(0.08, 0.12, 0.32, 1)
+polygon = PackedVector2Array(954, 369.75, 978, 369.75, 978, 393.75, 954, 393.75)
+
+[node name="Borde" type="Line2D" parent="Placeholders/VisParkour1" unique_id=517844671]
+points = PackedVector2Array(954, 369.75, 978, 369.75, 978, 393.75, 954, 393.75)
+closed = true
+width = 1.0
+default_color = Color(0.2, 0.9, 1, 1)
+
+[node name="VisParkour2" type="Polygon2D" parent="Placeholders" unique_id=1575170570]
+color = Color(0.08, 0.12, 0.32, 1)
+polygon = PackedVector2Array(1500, 363.75, 1530, 363.75, 1530, 393.75, 1500, 393.75)
+
+[node name="Borde" type="Line2D" parent="Placeholders/VisParkour2" unique_id=287150460]
+points = PackedVector2Array(1500, 363.75, 1530, 363.75, 1530, 393.75, 1500, 393.75)
+closed = true
+width = 1.0
+default_color = Color(0.2, 0.9, 1, 1)
+
+[node name="VisParkour3" type="Polygon2D" parent="Placeholders" unique_id=522722707]
+color = Color(0.08, 0.12, 0.32, 1)
+polygon = PackedVector2Array(1889.2, 375.75, 1935.2, 375.75, 1935.2, 393.75, 1889.2, 393.75)
+
+[node name="Borde" type="Line2D" parent="Placeholders/VisParkour3" unique_id=1264254240]
+points = PackedVector2Array(1889.2, 375.75, 1935.2, 375.75, 1935.2, 393.75, 1889.2, 393.75)
+closed = true
+width = 1.0
+default_color = Color(0.2, 0.9, 1, 1)
+
+[node name="VisParkour4" type="Polygon2D" parent="Placeholders" unique_id=369408332]
+color = Color(0.08, 0.12, 0.32, 1)
+polygon = PackedVector2Array(1983.2, 357.75, 2029.2, 357.75, 2029.2, 393.75, 1983.2, 393.75)
+
+[node name="Borde" type="Line2D" parent="Placeholders/VisParkour4" unique_id=513810050]
+points = PackedVector2Array(1983.2, 357.75, 2029.2, 357.75, 2029.2, 393.75, 1983.2, 393.75)
+closed = true
+width = 1.0
+default_color = Color(0.2, 0.9, 1, 1)
+
+[node name="VisParkour5" type="Polygon2D" parent="Placeholders" unique_id=1385339886]
+color = Color(0.08, 0.12, 0.32, 1)
+polygon = PackedVector2Array(2468, 363.75, 2570, 363.75, 2570, 371.75, 2468, 371.75)
+
+[node name="Borde" type="Line2D" parent="Placeholders/VisParkour5" unique_id=1762790846]
+points = PackedVector2Array(2468, 363.75, 2570, 363.75, 2570, 371.75, 2468, 371.75)
+closed = true
+width = 1.0
+default_color = Color(0.2, 0.9, 1, 1)
+
+[node name="VisParkour6" type="Polygon2D" parent="Placeholders" unique_id=1913778353]
+color = Color(0.08, 0.12, 0.32, 1)
+polygon = PackedVector2Array(3128.4, 379.75, 3174.4, 379.75, 3174.4, 393.75, 3128.4, 393.75)
+
+[node name="Borde" type="Line2D" parent="Placeholders/VisParkour6" unique_id=21209934]
+points = PackedVector2Array(3128.4, 379.75, 3174.4, 379.75, 3174.4, 393.75, 3128.4, 393.75)
+closed = true
+width = 1.0
+default_color = Color(0.2, 0.9, 1, 1)
+
+[node name="VisParkour7" type="Polygon2D" parent="Placeholders" unique_id=999317814]
+color = Color(0.08, 0.12, 0.32, 1)
+polygon = PackedVector2Array(3222.4, 365.75, 3268.4, 365.75, 3268.4, 393.75, 3222.4, 393.75)
+
+[node name="Borde" type="Line2D" parent="Placeholders/VisParkour7" unique_id=1612189059]
+points = PackedVector2Array(3222.4, 365.75, 3268.4, 365.75, 3268.4, 393.75, 3222.4, 393.75)
+closed = true
+width = 1.0
+default_color = Color(0.2, 0.9, 1, 1)
+
+[node name="VisParkour8" type="Polygon2D" parent="Placeholders" unique_id=1484544720]
+color = Color(0.08, 0.12, 0.32, 1)
+polygon = PackedVector2Array(3316.4, 351.75, 3362.4, 351.75, 3362.4, 393.75, 3316.4, 393.75)
+
+[node name="Borde" type="Line2D" parent="Placeholders/VisParkour8" unique_id=109214566]
+points = PackedVector2Array(3316.4, 351.75, 3362.4, 351.75, 3362.4, 393.75, 3316.4, 393.75)
+closed = true
+width = 1.0
+default_color = Color(0.2, 0.9, 1, 1)
+
+[node name="VisParkour9" type="Polygon2D" parent="Placeholders" unique_id=1720128342]
+color = Color(0.08, 0.12, 0.32, 1)
+polygon = PackedVector2Array(4063.6, 361.75, 4179.6, 361.75, 4179.6, 369.75, 4063.6, 369.75)
+
+[node name="Borde" type="Line2D" parent="Placeholders/VisParkour9" unique_id=1504141556]
+points = PackedVector2Array(4063.6, 361.75, 4179.6, 361.75, 4179.6, 369.75, 4063.6, 369.75)
+closed = true
+width = 1.0
+default_color = Color(0.2, 0.9, 1, 1)
+
+[node name="VisParkour10" type="Polygon2D" parent="Placeholders" unique_id=1185462599]
+color = Color(0.08, 0.12, 0.32, 1)
+polygon = PackedVector2Array(4508.4, 363.75, 4538.4, 363.75, 4538.4, 393.75, 4508.4, 393.75)
+
+[node name="Borde" type="Line2D" parent="Placeholders/VisParkour10" unique_id=1578925218]
+points = PackedVector2Array(4508.4, 363.75, 4538.4, 363.75, 4538.4, 393.75, 4508.4, 393.75)
+closed = true
+width = 1.0
+default_color = Color(0.2, 0.9, 1, 1)
+
+[node name="VisPico1_1" type="Polygon2D" parent="Placeholders" unique_id=1887717968]
+color = Color(1, 0.15, 0.3, 1)
+polygon = PackedVector2Array(640, 393.75, 654, 393.75, 647, 379.75)
+
+[node name="Borde" type="Line2D" parent="Placeholders/VisPico1_1" unique_id=1094719956]
+points = PackedVector2Array(640, 393.75, 654, 393.75, 647, 379.75)
+closed = true
+width = 1.0
+default_color = Color(1, 0.6, 0.7, 1)
+
+[node name="VisPico2_1" type="Polygon2D" parent="Placeholders" unique_id=198364783]
+color = Color(1, 0.15, 0.3, 1)
+polygon = PackedVector2Array(796.8, 393.75, 810.8, 393.75, 803.8, 379.75)
+
+[node name="Borde" type="Line2D" parent="Placeholders/VisPico2_1" unique_id=1192791929]
+points = PackedVector2Array(796.8, 393.75, 810.8, 393.75, 803.8, 379.75)
+closed = true
+width = 1.0
+default_color = Color(1, 0.6, 0.7, 1)
+
+[node name="VisPico2_2" type="Polygon2D" parent="Placeholders" unique_id=1770249723]
+color = Color(1, 0.15, 0.3, 1)
+polygon = PackedVector2Array(810.8, 393.75, 824.8, 393.75, 817.8, 379.75)
+
+[node name="Borde" type="Line2D" parent="Placeholders/VisPico2_2" unique_id=1507797591]
+points = PackedVector2Array(810.8, 393.75, 824.8, 393.75, 817.8, 379.75)
+closed = true
+width = 1.0
+default_color = Color(1, 0.6, 0.7, 1)
+
+[node name="VisPico3_1" type="Polygon2D" parent="Placeholders" unique_id=1784034184]
+color = Color(1, 0.15, 0.3, 1)
+polygon = PackedVector2Array(1356.4, 393.75, 1370.4, 393.75, 1363.4, 379.75)
+
+[node name="Borde" type="Line2D" parent="Placeholders/VisPico3_1" unique_id=1715760136]
+points = PackedVector2Array(1356.4, 393.75, 1370.4, 393.75, 1363.4, 379.75)
+closed = true
+width = 1.0
+default_color = Color(1, 0.6, 0.7, 1)
+
+[node name="VisPico3_2" type="Polygon2D" parent="Placeholders" unique_id=77717004]
+color = Color(1, 0.15, 0.3, 1)
+polygon = PackedVector2Array(1370.4, 393.75, 1384.4, 393.75, 1377.4, 379.75)
+
+[node name="Borde" type="Line2D" parent="Placeholders/VisPico3_2" unique_id=1065579951]
+points = PackedVector2Array(1370.4, 393.75, 1384.4, 393.75, 1377.4, 379.75)
+closed = true
+width = 1.0
+default_color = Color(1, 0.6, 0.7, 1)
+
+[node name="VisPico4_1" type="Polygon2D" parent="Placeholders" unique_id=1919792396]
+color = Color(1, 0.15, 0.3, 1)
+polygon = PackedVector2Array(2238.4, 393.75, 2252.4, 393.75, 2245.4, 379.75)
+
+[node name="Borde" type="Line2D" parent="Placeholders/VisPico4_1" unique_id=2004970834]
+points = PackedVector2Array(2238.4, 393.75, 2252.4, 393.75, 2245.4, 379.75)
+closed = true
+width = 1.0
+default_color = Color(1, 0.6, 0.7, 1)
+
+[node name="VisPico5_1" type="Polygon2D" parent="Placeholders" unique_id=1242643548]
+color = Color(1, 0.15, 0.3, 1)
+polygon = PackedVector2Array(2340.8, 393.75, 2354.8, 393.75, 2347.8, 379.75)
+
+[node name="Borde" type="Line2D" parent="Placeholders/VisPico5_1" unique_id=857951892]
+points = PackedVector2Array(2340.8, 393.75, 2354.8, 393.75, 2347.8, 379.75)
+closed = true
+width = 1.0
+default_color = Color(1, 0.6, 0.7, 1)
+
+[node name="VisPico6_1" type="Polygon2D" parent="Placeholders" unique_id=70244446]
+color = Color(1, 0.15, 0.3, 1)
+polygon = PackedVector2Array(2484, 393.75, 2498, 393.75, 2491, 379.75)
+
+[node name="Borde" type="Line2D" parent="Placeholders/VisPico6_1" unique_id=1621083968]
+points = PackedVector2Array(2484, 393.75, 2498, 393.75, 2491, 379.75)
+closed = true
+width = 1.0
+default_color = Color(1, 0.6, 0.7, 1)
+
+[node name="VisPico6_2" type="Polygon2D" parent="Placeholders" unique_id=387385122]
+color = Color(1, 0.15, 0.3, 1)
+polygon = PackedVector2Array(2498, 393.75, 2512, 393.75, 2505, 379.75)
+
+[node name="Borde" type="Line2D" parent="Placeholders/VisPico6_2" unique_id=1475307743]
+points = PackedVector2Array(2498, 393.75, 2512, 393.75, 2505, 379.75)
+closed = true
+width = 1.0
+default_color = Color(1, 0.6, 0.7, 1)
+
+[node name="VisPico6_3" type="Polygon2D" parent="Placeholders" unique_id=547329460]
+color = Color(1, 0.15, 0.3, 1)
+polygon = PackedVector2Array(2512, 393.75, 2526, 393.75, 2519, 379.75)
+
+[node name="Borde" type="Line2D" parent="Placeholders/VisPico6_3" unique_id=2047497126]
+points = PackedVector2Array(2512, 393.75, 2526, 393.75, 2519, 379.75)
+closed = true
+width = 1.0
+default_color = Color(1, 0.6, 0.7, 1)
+
+[node name="VisPico6_4" type="Polygon2D" parent="Placeholders" unique_id=1161914252]
+color = Color(1, 0.15, 0.3, 1)
+polygon = PackedVector2Array(2526, 393.75, 2540, 393.75, 2533, 379.75)
+
+[node name="Borde" type="Line2D" parent="Placeholders/VisPico6_4" unique_id=481760152]
+points = PackedVector2Array(2526, 393.75, 2540, 393.75, 2533, 379.75)
+closed = true
+width = 1.0
+default_color = Color(1, 0.6, 0.7, 1)
+
+[node name="VisPico6_5" type="Polygon2D" parent="Placeholders" unique_id=981614161]
+color = Color(1, 0.15, 0.3, 1)
+polygon = PackedVector2Array(2540, 393.75, 2554, 393.75, 2547, 379.75)
+
+[node name="Borde" type="Line2D" parent="Placeholders/VisPico6_5" unique_id=1392497]
+points = PackedVector2Array(2540, 393.75, 2554, 393.75, 2547, 379.75)
+closed = true
+width = 1.0
+default_color = Color(1, 0.6, 0.7, 1)
+
+[node name="VisPico7_1" type="Polygon2D" parent="Placeholders" unique_id=26992832]
+color = Color(1, 0.15, 0.3, 1)
+polygon = PackedVector2Array(2971.2, 393.75, 2985.2, 393.75, 2978.2, 379.75)
+
+[node name="Borde" type="Line2D" parent="Placeholders/VisPico7_1" unique_id=2019596769]
+points = PackedVector2Array(2971.2, 393.75, 2985.2, 393.75, 2978.2, 379.75)
+closed = true
+width = 1.0
+default_color = Color(1, 0.6, 0.7, 1)
+
+[node name="VisPico7_2" type="Polygon2D" parent="Placeholders" unique_id=799778094]
+color = Color(1, 0.15, 0.3, 1)
+polygon = PackedVector2Array(2985.2, 393.75, 2999.2, 393.75, 2992.2, 379.75)
+
+[node name="Borde" type="Line2D" parent="Placeholders/VisPico7_2" unique_id=355800816]
+points = PackedVector2Array(2985.2, 393.75, 2999.2, 393.75, 2992.2, 379.75)
+closed = true
+width = 1.0
+default_color = Color(1, 0.6, 0.7, 1)
+
+[node name="VisPico8_1" type="Polygon2D" parent="Placeholders" unique_id=1369340805]
+color = Color(1, 0.15, 0.3, 1)
+polygon = PackedVector2Array(3777.6, 393.75, 3791.6, 393.75, 3784.6, 379.75)
+
+[node name="Borde" type="Line2D" parent="Placeholders/VisPico8_1" unique_id=688416651]
+points = PackedVector2Array(3777.6, 393.75, 3791.6, 393.75, 3784.6, 379.75)
+closed = true
+width = 1.0
+default_color = Color(1, 0.6, 0.7, 1)
+
+[node name="VisPico9_1" type="Polygon2D" parent="Placeholders" unique_id=1424809382]
+color = Color(1, 0.15, 0.3, 1)
+polygon = PackedVector2Array(4079.6, 393.75, 4093.6, 393.75, 4086.6, 379.75)
+
+[node name="Borde" type="Line2D" parent="Placeholders/VisPico9_1" unique_id=108836236]
+points = PackedVector2Array(4079.6, 393.75, 4093.6, 393.75, 4086.6, 379.75)
+closed = true
+width = 1.0
+default_color = Color(1, 0.6, 0.7, 1)
+
+[node name="VisPico9_2" type="Polygon2D" parent="Placeholders" unique_id=1348326069]
+color = Color(1, 0.15, 0.3, 1)
+polygon = PackedVector2Array(4093.6, 393.75, 4107.6, 393.75, 4100.6, 379.75)
+
+[node name="Borde" type="Line2D" parent="Placeholders/VisPico9_2" unique_id=923082169]
+points = PackedVector2Array(4093.6, 393.75, 4107.6, 393.75, 4100.6, 379.75)
+closed = true
+width = 1.0
+default_color = Color(1, 0.6, 0.7, 1)
+
+[node name="VisPico9_3" type="Polygon2D" parent="Placeholders" unique_id=323340171]
+color = Color(1, 0.15, 0.3, 1)
+polygon = PackedVector2Array(4107.6, 393.75, 4121.6, 393.75, 4114.6, 379.75)
+
+[node name="Borde" type="Line2D" parent="Placeholders/VisPico9_3" unique_id=1786441635]
+points = PackedVector2Array(4107.6, 393.75, 4121.6, 393.75, 4114.6, 379.75)
+closed = true
+width = 1.0
+default_color = Color(1, 0.6, 0.7, 1)
+
+[node name="VisPico9_4" type="Polygon2D" parent="Placeholders" unique_id=483025059]
+color = Color(1, 0.15, 0.3, 1)
+polygon = PackedVector2Array(4121.6, 393.75, 4135.6, 393.75, 4128.6, 379.75)
+
+[node name="Borde" type="Line2D" parent="Placeholders/VisPico9_4" unique_id=1535371698]
+points = PackedVector2Array(4121.6, 393.75, 4135.6, 393.75, 4128.6, 379.75)
+closed = true
+width = 1.0
+default_color = Color(1, 0.6, 0.7, 1)
+
+[node name="VisPico9_5" type="Polygon2D" parent="Placeholders" unique_id=614151047]
+color = Color(1, 0.15, 0.3, 1)
+polygon = PackedVector2Array(4135.6, 393.75, 4149.6, 393.75, 4142.6, 379.75)
+
+[node name="Borde" type="Line2D" parent="Placeholders/VisPico9_5" unique_id=291397813]
+points = PackedVector2Array(4135.6, 393.75, 4149.6, 393.75, 4142.6, 379.75)
+closed = true
+width = 1.0
+default_color = Color(1, 0.6, 0.7, 1)
+
+[node name="VisPico9_6" type="Polygon2D" parent="Placeholders" unique_id=1197439995]
+color = Color(1, 0.15, 0.3, 1)
+polygon = PackedVector2Array(4149.6, 393.75, 4163.6, 393.75, 4156.6, 379.75)
+
+[node name="Borde" type="Line2D" parent="Placeholders/VisPico9_6" unique_id=417252650]
+points = PackedVector2Array(4149.6, 393.75, 4163.6, 393.75, 4156.6, 379.75)
+closed = true
+width = 1.0
+default_color = Color(1, 0.6, 0.7, 1)
+
+[node name="VisPico10_1" type="Polygon2D" parent="Placeholders" unique_id=1197822855]
+color = Color(1, 0.15, 0.3, 1)
+polygon = PackedVector2Array(4392.4, 393.75, 4406.4, 393.75, 4399.4, 379.75)
+
+[node name="Borde" type="Line2D" parent="Placeholders/VisPico10_1" unique_id=1547148644]
+points = PackedVector2Array(4392.4, 393.75, 4406.4, 393.75, 4399.4, 379.75)
+closed = true
+width = 1.0
+default_color = Color(1, 0.6, 0.7, 1)
+
+[node name="VisPico10_2" type="Polygon2D" parent="Placeholders" unique_id=669838504]
+color = Color(1, 0.15, 0.3, 1)
+polygon = PackedVector2Array(4406.4, 393.75, 4420.4, 393.75, 4413.4, 379.75)
+
+[node name="Borde" type="Line2D" parent="Placeholders/VisPico10_2" unique_id=1252086361]
+points = PackedVector2Array(4406.4, 393.75, 4420.4, 393.75, 4413.4, 379.75)
+closed = true
+width = 1.0
+default_color = Color(1, 0.6, 0.7, 1)
+
+[node name="Suelo" type="Node2D" parent="." unique_id=850410169]
+
+[node name="Suelo1" type="StaticBody2D" parent="Suelo" unique_id=704684931]
+position = Vector2(588.6, 437)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Suelo/Suelo1" unique_id=363873277]
+shape = SubResource("RectangleShape2D_n3_1")
+
+[node name="Suelo2" type="StaticBody2D" parent="Suelo" unique_id=1940717989]
+position = Vector2(1457.6, 437)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Suelo/Suelo2" unique_id=1620408692]
+shape = SubResource("RectangleShape2D_n3_2")
+
+[node name="Suelo3" type="StaticBody2D" parent="Suelo" unique_id=179891342]
+position = Vector2(2261, 437)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Suelo/Suelo3" unique_id=1584033511]
+shape = SubResource("RectangleShape2D_n3_3")
+
+[node name="Suelo4" type="StaticBody2D" parent="Suelo" unique_id=2051639404]
+position = Vector2(3199.8, 437)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Suelo/Suelo4" unique_id=568092271]
+shape = SubResource("RectangleShape2D_n3_4")
+
+[node name="Suelo5" type="StaticBody2D" parent="Suelo" unique_id=1734596464]
+position = Vector2(3764, 437)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Suelo/Suelo5" unique_id=325530766]
+shape = SubResource("RectangleShape2D_n3_5")
+
+[node name="Suelo6" type="StaticBody2D" parent="Suelo" unique_id=412555737]
+position = Vector2(4337, 437)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Suelo/Suelo6" unique_id=399544187]
+shape = SubResource("RectangleShape2D_n3_6")
+
+[node name="Suelo7" type="StaticBody2D" parent="Suelo" unique_id=9182567]
+position = Vector2(4828.6, 437)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Suelo/Suelo7" unique_id=1115014688]
+shape = SubResource("RectangleShape2D_n3_7")
+
+[node name="Suelo8" type="StaticBody2D" parent="Suelo" unique_id=538250591]
+position = Vector2(5099.8, 437)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Suelo/Suelo8" unique_id=554905994]
+shape = SubResource("RectangleShape2D_n3_8")
+
+[node name="Parkour" type="Node2D" parent="." unique_id=746211041]
+
+[node name="Parkour1" type="StaticBody2D" parent="Parkour" unique_id=50027214]
+position = Vector2(966, 381.75)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Parkour/Parkour1" unique_id=1629446276]
+shape = SubResource("RectangleShape2D_n3_9")
+
+[node name="Parkour2" type="StaticBody2D" parent="Parkour" unique_id=2140340425]
+position = Vector2(1515, 378.75)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Parkour/Parkour2" unique_id=1943834586]
+shape = SubResource("RectangleShape2D_n3_10")
+
+[node name="Parkour3" type="StaticBody2D" parent="Parkour" unique_id=275164262]
+position = Vector2(1912.2, 384.75)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Parkour/Parkour3" unique_id=15887278]
+shape = SubResource("RectangleShape2D_n3_11")
+
+[node name="Parkour4" type="StaticBody2D" parent="Parkour" unique_id=1245686605]
+position = Vector2(2006.2, 375.75)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Parkour/Parkour4" unique_id=1697032385]
+shape = SubResource("RectangleShape2D_n3_12")
+
+[node name="Parkour5" type="StaticBody2D" parent="Parkour" unique_id=1557002325]
+position = Vector2(2519, 367.75)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Parkour/Parkour5" unique_id=1526409579]
+shape = SubResource("RectangleShape2D_n3_13")
+
+[node name="Parkour6" type="StaticBody2D" parent="Parkour" unique_id=1299580760]
+position = Vector2(3151.4, 386.75)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Parkour/Parkour6" unique_id=1810993891]
+shape = SubResource("RectangleShape2D_n3_14")
+
+[node name="Parkour7" type="StaticBody2D" parent="Parkour" unique_id=23571132]
+position = Vector2(3245.4, 379.75)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Parkour/Parkour7" unique_id=1164776187]
+shape = SubResource("RectangleShape2D_n3_15")
+
+[node name="Parkour8" type="StaticBody2D" parent="Parkour" unique_id=1082184178]
+position = Vector2(3339.4, 372.75)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Parkour/Parkour8" unique_id=287281894]
+shape = SubResource("RectangleShape2D_n3_16")
+
+[node name="Parkour9" type="StaticBody2D" parent="Parkour" unique_id=38276828]
+position = Vector2(4121.6, 365.75)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Parkour/Parkour9" unique_id=1180943313]
+shape = SubResource("RectangleShape2D_n3_17")
+
+[node name="Parkour10" type="StaticBody2D" parent="Parkour" unique_id=835418092]
+position = Vector2(4523.4, 378.75)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Parkour/Parkour10" unique_id=680950516]
+shape = SubResource("RectangleShape2D_n3_18")
+
+[node name="KillZones" type="Node2D" parent="." unique_id=1775059286]
+
+[node name="KillZone1" type="Area2D" parent="KillZones" unique_id=898816302]
+position = Vector2(640, 393.75)
+collision_layer = 0
+script = ExtResource("2_resp")
+
+[node name="Pico1" type="CollisionPolygon2D" parent="KillZones/KillZone1" unique_id=1245367134]
+polygon = PackedVector2Array(0, 0, 14, 0, 7, -14)
+
+[node name="KillZone2" type="Area2D" parent="KillZones" unique_id=43401873]
+position = Vector2(796.8, 393.75)
+collision_layer = 0
+script = ExtResource("2_resp")
+
+[node name="Pico1" type="CollisionPolygon2D" parent="KillZones/KillZone2" unique_id=1335962989]
+polygon = PackedVector2Array(0, 0, 14, 0, 7, -14)
+
+[node name="Pico2" type="CollisionPolygon2D" parent="KillZones/KillZone2" unique_id=1184570472]
+polygon = PackedVector2Array(14, 0, 28, 0, 21, -14)
+
+[node name="KillZone3" type="Area2D" parent="KillZones" unique_id=1737371528]
+position = Vector2(1356.4, 393.75)
+collision_layer = 0
+script = ExtResource("2_resp")
+
+[node name="Pico1" type="CollisionPolygon2D" parent="KillZones/KillZone3" unique_id=1538925391]
+polygon = PackedVector2Array(0, 0, 14, 0, 7, -14)
+
+[node name="Pico2" type="CollisionPolygon2D" parent="KillZones/KillZone3" unique_id=704853434]
+polygon = PackedVector2Array(14, 0, 28, 0, 21, -14)
+
+[node name="KillZone4" type="Area2D" parent="KillZones" unique_id=1245999722]
+position = Vector2(2238.4, 393.75)
+collision_layer = 0
+script = ExtResource("2_resp")
+
+[node name="Pico1" type="CollisionPolygon2D" parent="KillZones/KillZone4" unique_id=525697714]
+polygon = PackedVector2Array(0, 0, 14, 0, 7, -14)
+
+[node name="KillZone5" type="Area2D" parent="KillZones" unique_id=526681390]
+position = Vector2(2340.8, 393.75)
+collision_layer = 0
+script = ExtResource("2_resp")
+
+[node name="Pico1" type="CollisionPolygon2D" parent="KillZones/KillZone5" unique_id=979465953]
+polygon = PackedVector2Array(0, 0, 14, 0, 7, -14)
+
+[node name="KillZone6" type="Area2D" parent="KillZones" unique_id=88281749]
+position = Vector2(2484, 393.75)
+collision_layer = 0
+script = ExtResource("2_resp")
+
+[node name="Pico1" type="CollisionPolygon2D" parent="KillZones/KillZone6" unique_id=1599421038]
+polygon = PackedVector2Array(0, 0, 14, 0, 7, -14)
+
+[node name="Pico2" type="CollisionPolygon2D" parent="KillZones/KillZone6" unique_id=1453786839]
+polygon = PackedVector2Array(14, 0, 28, 0, 21, -14)
+
+[node name="Pico3" type="CollisionPolygon2D" parent="KillZones/KillZone6" unique_id=2146874117]
+polygon = PackedVector2Array(28, 0, 42, 0, 35, -14)
+
+[node name="Pico4" type="CollisionPolygon2D" parent="KillZones/KillZone6" unique_id=486123597]
+polygon = PackedVector2Array(42, 0, 56, 0, 49, -14)
+
+[node name="Pico5" type="CollisionPolygon2D" parent="KillZones/KillZone6" unique_id=315599949]
+polygon = PackedVector2Array(56, 0, 70, 0, 63, -14)
+
+[node name="KillZone7" type="Area2D" parent="KillZones" unique_id=1747660988]
+position = Vector2(2971.2, 393.75)
+collision_layer = 0
+script = ExtResource("2_resp")
+
+[node name="Pico1" type="CollisionPolygon2D" parent="KillZones/KillZone7" unique_id=1743066480]
+polygon = PackedVector2Array(0, 0, 14, 0, 7, -14)
+
+[node name="Pico2" type="CollisionPolygon2D" parent="KillZones/KillZone7" unique_id=655909284]
+polygon = PackedVector2Array(14, 0, 28, 0, 21, -14)
+
+[node name="KillZone8" type="Area2D" parent="KillZones" unique_id=371348443]
+position = Vector2(3777.6, 393.75)
+collision_layer = 0
+script = ExtResource("2_resp")
+
+[node name="Pico1" type="CollisionPolygon2D" parent="KillZones/KillZone8" unique_id=1571349661]
+polygon = PackedVector2Array(0, 0, 14, 0, 7, -14)
+
+[node name="KillZone9" type="Area2D" parent="KillZones" unique_id=1037619524]
+position = Vector2(4079.6, 393.75)
+collision_layer = 0
+script = ExtResource("2_resp")
+
+[node name="Pico1" type="CollisionPolygon2D" parent="KillZones/KillZone9" unique_id=1952829991]
+polygon = PackedVector2Array(0, 0, 14, 0, 7, -14)
+
+[node name="Pico2" type="CollisionPolygon2D" parent="KillZones/KillZone9" unique_id=1668605886]
+polygon = PackedVector2Array(14, 0, 28, 0, 21, -14)
+
+[node name="Pico3" type="CollisionPolygon2D" parent="KillZones/KillZone9" unique_id=1853298493]
+polygon = PackedVector2Array(28, 0, 42, 0, 35, -14)
+
+[node name="Pico4" type="CollisionPolygon2D" parent="KillZones/KillZone9" unique_id=1406959630]
+polygon = PackedVector2Array(42, 0, 56, 0, 49, -14)
+
+[node name="Pico5" type="CollisionPolygon2D" parent="KillZones/KillZone9" unique_id=1840545829]
+polygon = PackedVector2Array(56, 0, 70, 0, 63, -14)
+
+[node name="Pico6" type="CollisionPolygon2D" parent="KillZones/KillZone9" unique_id=1938187686]
+polygon = PackedVector2Array(70, 0, 84, 0, 77, -14)
+
+[node name="KillZone10" type="Area2D" parent="KillZones" unique_id=1113709013]
+position = Vector2(4392.4, 393.75)
+collision_layer = 0
+script = ExtResource("2_resp")
+
+[node name="Pico1" type="CollisionPolygon2D" parent="KillZones/KillZone10" unique_id=1894269720]
+polygon = PackedVector2Array(0, 0, 14, 0, 7, -14)
+
+[node name="Pico2" type="CollisionPolygon2D" parent="KillZones/KillZone10" unique_id=2100066482]
+polygon = PackedVector2Array(14, 0, 28, 0, 21, -14)
+
+[node name="KillZoneAbismo" type="Area2D" parent="KillZones" unique_id=545106505]
+position = Vector2(2640, 530)
+collision_layer = 0
+script = ExtResource("2_resp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KillZones/KillZoneAbismo" unique_id=1860334444]
+shape = SubResource("RectangleShape2D_n3_19")
+
+[node name="Limites" type="Node2D" parent="." unique_id=1110836900]
+
+[node name="LimiteIzquierdo" type="StaticBody2D" parent="Limites" unique_id=924916168]
+position = Vector2(-10, 290)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Limites/LimiteIzquierdo" unique_id=1682602685]
+shape = SubResource("RectangleShape2D_n3_20")
+
+[node name="LimiteDerecho" type="StaticBody2D" parent="Limites" unique_id=1434178735]
+position = Vector2(5290, 290)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Limites/LimiteDerecho" unique_id=1426046851]
+shape = SubResource("RectangleShape2D_n3_21")
+
+[node name="FinDelNivel" type="Marker2D" parent="." unique_id=1656528687]
+position = Vector2(5120, 379.75)
+
+[node name="Player" type="CharacterBody2D" parent="." unique_id=361308130]
+position = Vector2(60, 379.75)
+scale = Vector2(0.5, 0.5)
+script = ExtResource("2_ck6kq")
+
+[node name="PJanimation" type="AnimatedSprite2D" parent="Player" unique_id=21010812]
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_l57m3")
+animation = &"idle"
+
+[node name="PJhitbox" type="CollisionShape2D" parent="Player" unique_id=456788502]
+position = Vector2(-2, -2)
+scale = Vector2(0.5, 0.5)
+shape = SubResource("RectangleShape2D_fc2y1")
+
+[node name="Camara" type="Camera2D" parent="Player" unique_id=887907423]
+position = Vector2(0, -200)
+scale = Vector2(0.5, 0.5)
+zoom = Vector2(0.25, 0.25)
+limit_left = 0
+limit_top = 7
+limit_right = 10560
+limit_bottom = 1159
+
+[connection signal="body_entered" from="KillZones/KillZone1" to="KillZones/KillZone1" method="_on_body_entered"]
+[connection signal="body_entered" from="KillZones/KillZone2" to="KillZones/KillZone2" method="_on_body_entered"]
+[connection signal="body_entered" from="KillZones/KillZone3" to="KillZones/KillZone3" method="_on_body_entered"]
+[connection signal="body_entered" from="KillZones/KillZone4" to="KillZones/KillZone4" method="_on_body_entered"]
+[connection signal="body_entered" from="KillZones/KillZone5" to="KillZones/KillZone5" method="_on_body_entered"]
+[connection signal="body_entered" from="KillZones/KillZone6" to="KillZones/KillZone6" method="_on_body_entered"]
+[connection signal="body_entered" from="KillZones/KillZone7" to="KillZones/KillZone7" method="_on_body_entered"]
+[connection signal="body_entered" from="KillZones/KillZone8" to="KillZones/KillZone8" method="_on_body_entered"]
+[connection signal="body_entered" from="KillZones/KillZone9" to="KillZones/KillZone9" method="_on_body_entered"]
+[connection signal="body_entered" from="KillZones/KillZone10" to="KillZones/KillZone10" method="_on_body_entered"]
+[connection signal="body_entered" from="KillZones/KillZoneAbismo" to="KillZones/KillZoneAbismo" method="_on_body_entered"]

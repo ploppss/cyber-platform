@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://clhdaxudxubel" path="res://recursos/player/PJRUN0.png" id="5_jriiy"]
 [ext_resource type="Texture2D" uid="uid://vnyr2k2dp2rc" path="res://recursos/player/PJRUN1.png" id="6_0pacm"]
 [ext_resource type="Texture2D" uid="uid://ccuqpg2hlyfjj" path="res://recursos/environment/Nivel2/Icons_Transparent.png" id="9_jriiy"]
+[ext_resource type="Script" uid="uid://bo03iypko3qr0" path="res://scripts/adware_manager.gd" id="10_adware"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kdeao"]
 size = Vector2(272.26868, 847.78406)
@@ -56,22 +57,54 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fc2y1"]
 size = Vector2(80, 120)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vwa1"]
+size = Vector2(146.7, 60.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vwa2"]
+size = Vector2(147.5, 61.2)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vwa3"]
+size = Vector2(150.9, 60.1)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vwa4"]
+size = Vector2(148.8, 60.9)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vwa5"]
+size = Vector2(129.5, 60.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vwa6"]
+size = Vector2(129.9, 61.3)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vwa7"]
+size = Vector2(215.5, 60.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vwa8"]
+size = Vector2(101, 60.2)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vwa9"]
+size = Vector2(120.9, 63.9)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vwa10"]
+size = Vector2(152, 60.3)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vwa11"]
+size = Vector2(152.5, 61.1)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vwa12"]
+size = Vector2(252.9, 60.3)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vwa13"]
+size = Vector2(118.5, 60)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vwa14"]
+size = Vector2(141.9, 63.7)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_wms0f"]
 atlas = ExtResource("9_jriiy")
 region = Rect2(68, 62, 840, 185)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dqgp5"]
 size = Vector2(152.75, 57)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ht0x6"]
-atlas = ExtResource("9_jriiy")
-region = Rect2(2167, 1243, 208, 231)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_2vqqc"]
-size = Vector2(37, 42)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_jriiy"]
-size = Vector2(105.5, 66.5)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jriiy"]
 atlas = ExtResource("9_jriiy")
@@ -80,15 +113,19 @@ region = Rect2(1283, 532, 558, 621)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0pacm"]
 size = Vector2(69.5, 58.5)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_iykeb"]
-size = Vector2(134.5, 66.5)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_0pacm"]
 atlas = ExtResource("9_jriiy")
 region = Rect2(68, 303, 1285, 198)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n2v61"]
 size = Vector2(234.5, 42)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1asf4"]
+size = Vector2(38.5, 43.5)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ht0x6"]
+atlas = ExtResource("9_jriiy")
+region = Rect2(2167, 1243, 208, 231)
 
 [node name="TestMain" type="Node2D" unique_id=1869153176]
 scale = Vector2(2, 2)
@@ -174,7 +211,7 @@ scale = Vector2(1, 0.9999998)
 shape = SubResource("RectangleShape2D_1fd4a")
 
 [node name="Player" type="CharacterBody2D" parent="." unique_id=1903134632]
-position = Vector2(1197, 331)
+position = Vector2(365.5, 365)
 scale = Vector2(0.5, 0.5)
 script = ExtResource("2_ck6kq")
 metadata/_edit_group_ = true
@@ -208,38 +245,122 @@ size_flags_vertical = 3
 color = Color(0, 0, 0, 1)
 metadata/_edit_use_anchors_ = true
 
-[node name="Download Now" type="StaticBody2D" parent="." unique_id=194838490]
+[node name="VentanasAdware" type="Node2D" parent="." unique_id=2123700385]
+
+[node name="ventanaAdware1" type="Area2D" parent="VentanasAdware" unique_id=2006884748 groups=["anuncios"]]
+position = Vector2(199.87, 210.97)
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="VentanasAdware/ventanaAdware1" unique_id=813597920]
+shape = SubResource("RectangleShape2D_vwa1")
+
+[node name="ventanaAdware2" type="Area2D" parent="VentanasAdware" unique_id=1764114947 groups=["anuncios"]]
+position = Vector2(450.3, 285.45)
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="VentanasAdware/ventanaAdware2" unique_id=1671241070]
+shape = SubResource("RectangleShape2D_vwa2")
+
+[node name="ventanaAdware3" type="Area2D" parent="VentanasAdware" unique_id=394760460 groups=["anuncios"]]
+position = Vector2(918, 301.9)
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="VentanasAdware/ventanaAdware3" unique_id=787527355]
+shape = SubResource("RectangleShape2D_vwa3")
+
+[node name="ventanaAdware4" type="Area2D" parent="VentanasAdware" unique_id=792274235 groups=["anuncios"]]
+position = Vector2(1092.12, 190.37)
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="VentanasAdware/ventanaAdware4" unique_id=9008983]
+shape = SubResource("RectangleShape2D_vwa4")
+
+[node name="ventanaAdware5" type="Area2D" parent="VentanasAdware" unique_id=1624020777 groups=["anuncios"]]
+position = Vector2(1346.61, 210.91)
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="VentanasAdware/ventanaAdware5" unique_id=1166576274]
+shape = SubResource("RectangleShape2D_vwa5")
+
+[node name="ventanaAdware6" type="Area2D" parent="VentanasAdware" unique_id=356672326 groups=["anuncios"]]
+position = Vector2(1567.96, 285.45)
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="VentanasAdware/ventanaAdware6" unique_id=1665998343]
+shape = SubResource("RectangleShape2D_vwa6")
+
+[node name="ventanaAdware7" type="Area2D" parent="VentanasAdware" unique_id=798887705 groups=["anuncios"]]
+position = Vector2(1851.84, 190.1)
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="VentanasAdware/ventanaAdware7" unique_id=636987606]
+shape = SubResource("RectangleShape2D_vwa7")
+
+[node name="ventanaAdware8" type="Area2D" parent="VentanasAdware" unique_id=2047974691 groups=["anuncios"]]
+position = Vector2(1996.97, 301.9)
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="VentanasAdware/ventanaAdware8" unique_id=103126943]
+shape = SubResource("RectangleShape2D_vwa8")
+
+[node name="ventanaAdware9" type="Area2D" parent="VentanasAdware" unique_id=495951056 groups=["anuncios"]]
+position = Vector2(2121.08, 189.91)
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="VentanasAdware/ventanaAdware9" unique_id=888889840]
+shape = SubResource("RectangleShape2D_vwa9")
+
+[node name="ventanaAdware10" type="Area2D" parent="VentanasAdware" unique_id=1800481655 groups=["anuncios"]]
+position = Vector2(2410.27, 212.12)
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="VentanasAdware/ventanaAdware10" unique_id=1573519291]
+shape = SubResource("RectangleShape2D_vwa10")
+
+[node name="ventanaAdware11" type="Area2D" parent="VentanasAdware" unique_id=1575260084 groups=["anuncios"]]
+position = Vector2(2670.05, 286.4)
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="VentanasAdware/ventanaAdware11" unique_id=724231657]
+shape = SubResource("RectangleShape2D_vwa11")
+
+[node name="ventanaAdware12" type="Area2D" parent="VentanasAdware" unique_id=1951789614 groups=["anuncios"]]
+position = Vector2(3003.19, 191.38)
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="VentanasAdware/ventanaAdware12" unique_id=1237967299]
+shape = SubResource("RectangleShape2D_vwa12")
+
+[node name="ventanaAdware13" type="Area2D" parent="VentanasAdware" unique_id=32621215 groups=["anuncios"]]
+position = Vector2(3173.51, 302.8)
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="VentanasAdware/ventanaAdware13" unique_id=1889964829]
+shape = SubResource("RectangleShape2D_vwa13")
+
+[node name="ventanaAdware14" type="Area2D" parent="VentanasAdware" unique_id=1844432386 groups=["anuncios"]]
+position = Vector2(3319.15, 191.19)
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="VentanasAdware/ventanaAdware14" unique_id=1140156645]
+shape = SubResource("RectangleShape2D_vwa14")
+
+[node name="ventanaAdware15" type="Area2D" parent="VentanasAdware" unique_id=194838490 groups=["anuncios"]]
 position = Vector2(664.5, 304)
+collision_layer = 0
 metadata/_edit_group_ = true
 
-[node name="Sprite2D" type="Sprite2D" parent="Download Now" unique_id=970826130]
+[node name="Sprite2D" type="Sprite2D" parent="VentanasAdware/ventanaAdware15" unique_id=970826130]
 scale = Vector2(0.18244047, 0.30675682)
 texture = SubResource("AtlasTexture_wms0f")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Download Now" unique_id=2134670997]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="VentanasAdware/ventanaAdware15" unique_id=2134670997]
 position = Vector2(0.125, 0)
 shape = SubResource("RectangleShape2D_dqgp5")
 
-[node name="Escudo" type="StaticBody2D" parent="." unique_id=1622715848]
-position = Vector2(1261.5, 388.5)
-metadata/_edit_group_ = true
-
-[node name="Sprite2D" type="Sprite2D" parent="Escudo" unique_id=1489537480]
-scale = Vector2(0.18244047, 0.21145928)
-texture = SubResource("AtlasTexture_ht0x6")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Escudo" unique_id=544907407]
-shape = SubResource("RectangleShape2D_2vqqc")
-
-[node name="Peligro" type="StaticBody2D" parent="." unique_id=556710600]
-position = Vector2(1996, 306)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Peligro" unique_id=587621590]
-position = Vector2(0.25, -3.5)
-shape = SubResource("RectangleShape2D_jriiy")
-
-[node name="Regalo" type="StaticBody2D" parent="." unique_id=477145772]
-position = Vector2(1921, 383.5)
+[node name="Regalo" type="Area2D" parent="." unique_id=477145772 groups=["anuncios"]]
+position = Vector2(1881, 368)
+collision_layer = 0
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Regalo" unique_id=1823456497]
@@ -249,13 +370,6 @@ texture = SubResource("AtlasTexture_jriiy")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Regalo" unique_id=43727404]
 shape = SubResource("RectangleShape2D_0pacm")
-
-[node name="Oferta" type="StaticBody2D" parent="." unique_id=12089730]
-position = Vector2(1595, 295.5)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Oferta" unique_id=1661630708]
-position = Vector2(-26.5, -10)
-shape = SubResource("RectangleShape2D_iykeb")
 
 [node name="Cookies" type="StaticBody2D" parent="." unique_id=785868316]
 position = Vector2(1419, 357)
@@ -267,3 +381,17 @@ texture = SubResource("AtlasTexture_0pacm")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Cookies" unique_id=586003952]
 shape = SubResource("RectangleShape2D_n2v61")
+
+[node name="Adware" type="CanvasLayer" parent="." unique_id=1320733862 groups=["adware"]]
+script = ExtResource("10_adware")
+
+[node name="Escudo" type="StaticBody2D" parent="." unique_id=1594091855]
+position = Vector2(1268.75, 372.75)
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Escudo" unique_id=399512457]
+shape = SubResource("RectangleShape2D_1asf4")
+
+[node name="Sprite2D" type="Sprite2D" parent="Escudo" unique_id=1489537480]
+position = Vector2(-0.25, -1.75)
+scale = Vector2(0.18244047, 0.21145928)
+texture = SubResource("AtlasTexture_ht0x6")

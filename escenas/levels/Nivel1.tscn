@@ -400,7 +400,7 @@ position = Vector2(290, -177.75)
 shape = SubResource("RectangleShape2D_0a27y")
 
 [node name="Player" type="CharacterBody2D" parent="." unique_id=1903134632]
-position = Vector2(325.5, 343.5)
+position = Vector2(399, 310.5)
 scale = Vector2(0.5, 0.5)
 script = ExtResource("16_c4el4")
 metadata/_edit_group_ = true
