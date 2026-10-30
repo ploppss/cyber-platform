@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://dm73lk4bu76ad"]
+
+[ext_resource type="Texture2D" uid="uid://bewqavipj056d" path="res://recursos/environment/Nivel3/GladIdle.png" id="1_7bpc4"]
+[ext_resource type="Script" uid="uid://b1cp5i317xkhx" path="res://scripts/gladiador.gd" id="1_efl11"]
+[ext_resource type="Texture2D" uid="uid://bae6yf128k0rp" path="res://recursos/environment/Nivel3/GladF1.png" id="2_efl11"]
+[ext_resource type="Texture2D" uid="uid://dajqxpqra0wxv" path="res://recursos/environment/Nivel3/GladF2.png" id="3_4e88j"]
+[ext_resource type="Texture2D" uid="uid://dd0bb5420l4kj" path="res://recursos/environment/Nivel3/GladF3.png" id="4_tqlsi"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_s44mh"]
+animations = [{
+"frames": [{
+"duration": 0.8,
+"texture": ExtResource("1_7bpc4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_efl11")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_4e88j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_tqlsi")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_wms0f"]
+radius = 64.0
+height = 170.0
+
+[node name="Area2D" type="Area2D" unique_id=1160926706]
+script = ExtResource("1_efl11")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2061040956]
+position = Vector2(85.87501, 84.50001)
+scale = Vector2(0.08312988, 0.081542954)
+sprite_frames = SubResource("SpriteFrames_s44mh")
+autoplay = "default"
+frame_progress = 0.33070397
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=792261265]
+position = Vector2(80, 86)
+shape = SubResource("CapsuleShape2D_wms0f")

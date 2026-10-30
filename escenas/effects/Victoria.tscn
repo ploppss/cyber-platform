@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://cll53cmwxqgyn"]
+
+[ext_resource type="Texture2D" uid="uid://cx6hyiqr4qjjj" path="res://recursos/environment/Nivel3/Code_Generated_Image.png" id="1_33yq2"]
+
+[node name="Victoria" type="Control" unique_id=419095710]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+metadata/_edit_use_anchors_ = true
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1320131843]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -1.65
+anchor_top = -1.6333333
+anchor_right = 2.65
+anchor_bottom = 2.6333334
+offset_left = 528.0
+offset_top = 294.0
+offset_right = -528.0
+offset_bottom = -294.00003
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_33yq2")
+expand_mode = 1
+stretch_mode = 6
+metadata/_edit_use_anchors_ = true

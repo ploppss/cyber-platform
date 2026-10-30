@@ -7,6 +7,9 @@
 [ext_resource type="Texture2D" uid="uid://bw1j5wn4mjnlc" path="res://recursos/player/PJIDLE1.png" id="4_ua5sp"]
 [ext_resource type="Texture2D" uid="uid://clhdaxudxubel" path="res://recursos/player/PJRUN0.png" id="5_jriiy"]
 [ext_resource type="Texture2D" uid="uid://vnyr2k2dp2rc" path="res://recursos/player/PJRUN1.png" id="6_0pacm"]
+[ext_resource type="PackedScene" uid="uid://dm73lk4bu76ad" path="res://escenas/effects/Gladiador.tscn" id="8_obw0k"]
+[ext_resource type="Texture2D" uid="uid://vwpi6tuiec8t" path="res://recursos/environment/Nivel3/WindowsDefender.png" id="9_8sw11"]
+[ext_resource type="Script" uid="uid://dn6r2sujw2nts" path="res://escenas/levels/windows_defender.gd" id="9_bret7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n3_1"]
 size = Vector2(1177.2, 86.5)
@@ -101,6 +104,9 @@ animations = [{
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fc2y1"]
 size = Vector2(80, 120)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_wms0f"]
+radius = 59.518906
 
 [node name="Nivel3" type="Node2D" unique_id=1691080899]
 scale = Vector2(2, 2)
@@ -806,13 +812,11 @@ position = Vector2(5290, 290)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Limites/LimiteDerecho" unique_id=1426046851]
 shape = SubResource("RectangleShape2D_n3_21")
 
-[node name="FinDelNivel" type="Marker2D" parent="." unique_id=1656528687]
-position = Vector2(5120, 379.75)
-
 [node name="Player" type="CharacterBody2D" parent="." unique_id=361308130]
-position = Vector2(60, 379.75)
+position = Vector2(333.5, 377)
 scale = Vector2(0.5, 0.5)
 script = ExtResource("2_ck6kq")
+metadata/_edit_group_ = true
 
 [node name="PJanimation" type="AnimatedSprite2D" parent="Player" unique_id=21010812]
 scale = Vector2(0.5, 0.5)
@@ -832,6 +836,23 @@ limit_left = 0
 limit_top = 7
 limit_right = 10560
 limit_bottom = 1159
+
+[node name="Gladiador" parent="." unique_id=1160926706 instance=ExtResource("8_obw0k")]
+position = Vector2(-7.5, 157)
+scale = Vector2(1.5, 1.5)
+
+[node name="Windows Defender" type="Area2D" parent="." unique_id=1723288954]
+position = Vector2(5098, 336.5)
+script = ExtResource("9_bret7")
+escena_victoria = "uid://cll53cmwxqgyn"
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Windows Defender" unique_id=242811135]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("9_8sw11")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Windows Defender" unique_id=350855755]
+shape = SubResource("CircleShape2D_wms0f")
 
 [connection signal="body_entered" from="KillZones/KillZone1" to="KillZones/KillZone1" method="_on_body_entered"]
 [connection signal="body_entered" from="KillZones/KillZone2" to="KillZones/KillZone2" method="_on_body_entered"]

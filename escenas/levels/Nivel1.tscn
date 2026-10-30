@@ -265,7 +265,7 @@ scale = Vector2(1, 1.6562405)
 texture = ExtResource("12_r7xmp")
 
 [node name="Parkour3" type="StaticBody2D" parent="." unique_id=1568931325]
-position = Vector2(779.5, 337)
+position = Vector2(774.5, 334.5)
 scale = Vector2(0.8361205, 0.68620265)
 metadata/_edit_group_ = true
 
@@ -277,7 +277,7 @@ scale = Vector2(0.68676615, 0.84155405)
 texture = ExtResource("9_4pbku")
 
 [node name="Parkour4" type="StaticBody2D" parent="." unique_id=2137295962]
-position = Vector2(915.4998, 322)
+position = Vector2(888.5, 329)
 scale = Vector2(0.8361205, 0.68620265)
 metadata/_edit_group_ = true
 
@@ -294,7 +294,7 @@ scale = Vector2(0.8024222, 0.705405)
 texture = ExtResource("13_ksxku")
 
 [node name="Parkour5" type="StaticBody2D" parent="." unique_id=1777312844]
-position = Vector2(997.99994, 289)
+position = Vector2(983, 290)
 scale = Vector2(0.8361205, 0.68620265)
 metadata/_edit_group_ = true
 
@@ -308,7 +308,7 @@ scale = Vector2(0.7942741, 0.8363333)
 texture = ExtResource("14_dt5ht")
 
 [node name="Parkour6" type="StaticBody2D" parent="." unique_id=1375968007]
-position = Vector2(1096, 235.50003)
+position = Vector2(1076.5, 237.5)
 scale = Vector2(0.8361205, 0.68620265)
 metadata/_edit_group_ = true
 
@@ -325,8 +325,9 @@ position = Vector2(-24.817139, 2.1859436)
 shape = SubResource("RectangleShape2D_rskq6")
 
 [node name="Parkour7" type="StaticBody2D" parent="." unique_id=206996787]
-position = Vector2(1213.5, 196.49998)
+position = Vector2(1198, 205.99998)
 scale = Vector2(0.8361205, 0.68620265)
+metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Parkour7" unique_id=512402533]
 texture = ExtResource("16_2io18")
@@ -341,7 +342,7 @@ position = Vector2(-25.929932, -21.130768)
 shape = SubResource("RectangleShape2D_ywetn")
 
 [node name="Parkour8" type="StaticBody2D" parent="." unique_id=832854501]
-position = Vector2(1381, 275.5)
+position = Vector2(1325, 275.5)
 scale = Vector2(0.8361205, 0.68620265)
 metadata/_edit_group_ = true
 
@@ -355,7 +356,7 @@ position = Vector2(-2.0928955, -3.2789307)
 shape = SubResource("RectangleShape2D_dmdee")
 
 [node name="Parkour9" type="StaticBody2D" parent="." unique_id=636615661]
-position = Vector2(1536.4999, 277)
+position = Vector2(1450.5, 277)
 scale = Vector2(0.8361205, 0.68620265)
 metadata/_edit_group_ = true
 
@@ -371,7 +372,7 @@ position = Vector2(-18.537842, 2.1859436)
 shape = SubResource("RectangleShape2D_ivjt5")
 
 [node name="Parkour10" type="StaticBody2D" parent="." unique_id=1008008216]
-position = Vector2(1660.5, 278)
+position = Vector2(1554, 291)
 scale = Vector2(0.8361205, 0.68620265)
 metadata/_edit_group_ = true
 
@@ -384,7 +385,8 @@ position = Vector2(-0.00048828125, -0.36437988)
 shape = SubResource("RectangleShape2D_mbjvu")
 
 [node name="Parkour11" type="StaticBody2D" parent="." unique_id=707648530]
-position = Vector2(1441, 410.5)
+position = Vector2(1340, 432.5)
+metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Parkour11" unique_id=797883795]
 position = Vector2(308.50006, -179.50002)
@@ -400,7 +402,7 @@ position = Vector2(290, -177.75)
 shape = SubResource("RectangleShape2D_0a27y")
 
 [node name="Player" type="CharacterBody2D" parent="." unique_id=1903134632]
-position = Vector2(1740.5, 156.5)
+position = Vector2(339, 290)
 scale = Vector2(0.5, 0.5)
 script = ExtResource("16_c4el4")
 metadata/_edit_group_ = true
@@ -421,7 +423,7 @@ scale = Vector2(0.5, 0.5)
 zoom = Vector2(0.25, 0.25)
 
 [node name="VPN_NextLev" type="Area2D" parent="." unique_id=1864560920 node_paths=PackedStringArray("pantalla_carga")]
-position = Vector2(1865.5, 160.5)
+position = Vector2(1747, 196)
 script = ExtResource("21_kqlu6")
 siguiente_escena = "uid://cg8prsg328elk"
 pantalla_carga = NodePath("../TransicionServidor")

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dik68dmqnji68"
-path="res://.godot/imported/IdleGladiator.png-947bca025ed4a982f90896c558ec98f8.ctex"
+uid="uid://vwpi6tuiec8t"
+path="res://.godot/imported/WindowsDefender.png-972dbed5490413ec5a0012f82b51c512.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://recursos/environment/Nivel3/IdleGladiator.png"
-dest_files=["res://.godot/imported/IdleGladiator.png-947bca025ed4a982f90896c558ec98f8.ctex"]
+source_file="res://recursos/environment/Nivel3/WindowsDefender.png"
+dest_files=["res://.godot/imported/WindowsDefender.png-972dbed5490413ec5a0012f82b51c512.ctex"]
 
 [params]
 
