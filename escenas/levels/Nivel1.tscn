@@ -400,7 +400,7 @@ position = Vector2(290, -177.75)
 shape = SubResource("RectangleShape2D_0a27y")
 
 [node name="Player" type="CharacterBody2D" parent="." unique_id=1903134632]
-position = Vector2(399, 310.5)
+position = Vector2(1740.5, 156.5)
 scale = Vector2(0.5, 0.5)
 script = ExtResource("16_c4el4")
 metadata/_edit_group_ = true
@@ -420,10 +420,11 @@ position = Vector2(0, -200)
 scale = Vector2(0.5, 0.5)
 zoom = Vector2(0.25, 0.25)
 
-[node name="VPN_NextLev" type="Area2D" parent="." unique_id=1864560920]
+[node name="VPN_NextLev" type="Area2D" parent="." unique_id=1864560920 node_paths=PackedStringArray("pantalla_carga")]
 position = Vector2(1865.5, 160.5)
 script = ExtResource("21_kqlu6")
 siguiente_escena = "uid://cg8prsg328elk"
+pantalla_carga = NodePath("../TransicionServidor")
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="VPN_NextLev" unique_id=1517027068]

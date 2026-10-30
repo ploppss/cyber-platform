@@ -10,6 +10,9 @@
 [ext_resource type="Texture2D" uid="uid://vnyr2k2dp2rc" path="res://recursos/player/PJRUN1.png" id="6_0pacm"]
 [ext_resource type="Texture2D" uid="uid://ccuqpg2hlyfjj" path="res://recursos/environment/Nivel2/Icons_Transparent.png" id="9_jriiy"]
 [ext_resource type="Script" uid="uid://bo03iypko3qr0" path="res://scripts/adware_manager.gd" id="10_adware"]
+[ext_resource type="Script" uid="uid://cknclef72ydb7" path="res://scripts/VPN_Teleport.gd" id="11_2vqqc"]
+[ext_resource type="Texture2D" uid="uid://d00gppa85bbfp" path="res://recursos/environment/Nivel2/Window3erNivel.png" id="12_enpha"]
+[ext_resource type="PackedScene" uid="uid://m76k6r46rndm" path="res://escenas/effects/TransicionTroyano.tscn" id="13_enpha"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kdeao"]
 size = Vector2(272.26868, 847.78406)
@@ -127,6 +130,9 @@ size = Vector2(38.5, 43.5)
 atlas = ExtResource("9_jriiy")
 region = Rect2(2167, 1243, 208, 231)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rn5sp"]
+size = Vector2(95, 50.75)
+
 [node name="TestMain" type="Node2D" unique_id=1869153176]
 scale = Vector2(2, 2)
 
@@ -211,7 +217,8 @@ scale = Vector2(1, 0.9999998)
 shape = SubResource("RectangleShape2D_1fd4a")
 
 [node name="Player" type="CharacterBody2D" parent="." unique_id=1903134632]
-position = Vector2(365.5, 365)
+z_index = 1
+position = Vector2(2705, 347)
 scale = Vector2(0.5, 0.5)
 script = ExtResource("2_ck6kq")
 metadata/_edit_group_ = true
@@ -395,3 +402,23 @@ shape = SubResource("RectangleShape2D_1asf4")
 position = Vector2(-0.25, -1.75)
 scale = Vector2(0.18244047, 0.21145928)
 texture = SubResource("AtlasTexture_ht0x6")
+
+[node name="NextLevel" type="Area2D" parent="." unique_id=937179273 node_paths=PackedStringArray("pantalla_carga")]
+position = Vector2(3049.5, 269.5)
+script = ExtResource("11_2vqqc")
+siguiente_escena = "uid://s8pv7t8xifc8"
+pantalla_carga = NodePath("../TransicionTroyano")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="NextLevel" unique_id=904385486]
+scale = Vector2(0.4264527, 0.44659424)
+texture = ExtResource("12_enpha")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NextLevel" unique_id=1743508504]
+position = Vector2(-68.5, 82.5)
+shape = SubResource("RectangleShape2D_rn5sp")
+
+[node name="TransicionTroyano" parent="." unique_id=1884946195 instance=ExtResource("13_enpha")]
+visible = false
+
+[connection signal="body_entered" from="NextLevel" to="NextLevel" method="_on_body_entered"]

@@ -1,0 +1,256 @@
+[gd_scene format=3 uid="uid://m76k6r46rndm"]
+
+[ext_resource type="Texture2D" uid="uid://duf8fatye3jb7" path="res://recursos/environment/Nivel3/Caballo.png" id="1_0233k"]
+[ext_resource type="Script" uid="uid://3xxe7dqvvnxk" path="res://scripts/efectos/transicion_troyano.gd" id="1_owaon"]
+[ext_resource type="Texture2D" uid="uid://bymkx6y68w0ro" path="res://recursos/environment/Nivel3/CaballoAlt.png" id="2_owaon"]
+[ext_resource type="Texture2D" uid="uid://dfsd2hm7c3kqc" path="res://recursos/environment/Nivel3/Explosion.png" id="3_ya3qy"]
+[ext_resource type="Texture2D" uid="uid://d4g4d2psa8n50" path="res://recursos/environment/Nivel3/ExplosionAlt.png" id="4_lx7gk"]
+[ext_resource type="Texture2D" uid="uid://dik68dmqnji68" path="res://recursos/environment/Nivel3/IdleGladiator.png" id="5_2p46o"]
+[ext_resource type="Texture2D" uid="uid://dajqxpqra0wxv" path="res://recursos/environment/Nivel3/GladF2.png" id="6_p755l"]
+[ext_resource type="Texture2D" uid="uid://bae6yf128k0rp" path="res://recursos/environment/Nivel3/GladF1.png" id="7_8m6p4"]
+[ext_resource type="Texture2D" uid="uid://dd0bb5420l4kj" path="res://recursos/environment/Nivel3/GladF3.png" id="8_0mvtx"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_81qhi"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_0233k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_owaon")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_55q6w"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_2p46o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_p755l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_8m6p4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_0mvtx")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="Animation" id="Animation_lfgwj"]
+resource_name = "Animacion"
+
+[sub_resource type="Animation" id="Animation_i53hm"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ContenedorExplosiones:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Gladiador:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Caballo:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Caballo:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(165, 85)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Caballo:frame")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+
+[sub_resource type="Animation" id="Animation_lm4hb"]
+resource_name = "Trancision_troyano"
+length = 3.0000000000000004
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ContenedorExplosiones:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2.4, 2.6),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Gladiador:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Caballo:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 2.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Caballo:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1, 1.2, 1.3, 1.4, 1.4999999, 1.6, 1.6999999, 1.8, 1.8999999, 2, 2.1, 2.1999998, 2.2999997),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(165, 85), Vector2(165, 85), Vector2(167, 85), Vector2(163, 85), Vector2(167, 85), Vector2(163, 85), Vector2(167, 85), Vector2(163, 85), Vector2(167, 85), Vector2(163, 85), Vector2(167, 85), Vector2(163, 85), Vector2(167, 85), Vector2(163, 85)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Caballo:frame")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 1.2, 1.4, 1.6, 1.7, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 1, 0, 1, 1]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_5dx2v"]
+_data = {
+&"Animacion": SubResource("Animation_lfgwj"),
+&"RESET": SubResource("Animation_i53hm"),
+&"Trancision_troyano": SubResource("Animation_lm4hb")
+}
+
+[node name="TransicionTroyano" type="CanvasLayer" unique_id=1884946195]
+layer = 10
+script = ExtResource("1_owaon")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1337173017]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Caballo" type="AnimatedSprite2D" parent="." unique_id=370776955]
+position = Vector2(165, 85)
+scale = Vector2(0.13574219, 0.14062503)
+sprite_frames = SubResource("SpriteFrames_81qhi")
+frame = 1
+
+[node name="ContenedorExplosiones" type="Node2D" parent="." unique_id=503897890]
+visible = false
+position = Vector2(165, 93)
+
+[node name="Explosion" type="Sprite2D" parent="ContenedorExplosiones" unique_id=1163059602]
+z_index = 1
+position = Vector2(4.000002, 8.000004)
+scale = Vector2(0.08300775, 0.09960937)
+texture = ExtResource("3_ya3qy")
+
+[node name="Explosion2" type="Sprite2D" parent="ContenedorExplosiones" unique_id=635694865]
+z_index = 1
+position = Vector2(5.000005, -9.000003)
+scale = Vector2(0.13378909, 0.14160164)
+texture = ExtResource("4_lx7gk")
+
+[node name="Explosion3" type="Sprite2D" parent="ContenedorExplosiones" unique_id=151221759]
+z_index = 5
+position = Vector2(-6.9999976, -4.000002)
+scale = Vector2(0.08984379, 0.06835937)
+texture = ExtResource("3_ya3qy")
+
+[node name="Explosion4" type="Sprite2D" parent="ContenedorExplosiones" unique_id=314367121]
+position = Vector2(8, 18)
+scale = Vector2(0.15625, 0.12890625)
+texture = ExtResource("4_lx7gk")
+
+[node name="Explosion5" type="Sprite2D" parent="ContenedorExplosiones" unique_id=31228304]
+position = Vector2(-6.0000076, 8)
+scale = Vector2(0.0976563, 0.083984435)
+texture = ExtResource("3_ya3qy")
+
+[node name="Explosion6" type="Sprite2D" parent="ContenedorExplosiones" unique_id=1846001925]
+z_index = 2
+position = Vector2(-9.000003, 20.000004)
+scale = Vector2(0.14355466, 0.10839847)
+texture = ExtResource("4_lx7gk")
+
+[node name="Explosion7" type="Sprite2D" parent="ContenedorExplosiones" unique_id=360042241]
+
+[node name="Explosion8" type="Sprite2D" parent="ContenedorExplosiones" unique_id=1216783242]
+
+[node name="Explosion9" type="Sprite2D" parent="ContenedorExplosiones" unique_id=1665710167]
+position = Vector2(-9.000002, -12.000004)
+scale = Vector2(0.14062501, 0.11914065)
+texture = ExtResource("3_ya3qy")
+
+[node name="Gladiador" type="AnimatedSprite2D" parent="." unique_id=783067403]
+visible = false
+position = Vector2(174, 87)
+scale = Vector2(0.10498049, 0.10546875)
+sprite_frames = SubResource("SpriteFrames_55q6w")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=870616935]
+libraries/ = SubResource("AnimationLibrary_5dx2v")
